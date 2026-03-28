@@ -161,13 +161,21 @@
   }
 }
 
-/* Retro portfolio styles */
+/* ══════════════════════════════════════════════════════════════ */
+/*                    1️⃣  HEADER & NAVIGATION                     */
+/* ══════════════════════════════════════════════════════════════ */
+
+/* ============================================================ */
+/* LAYOUT - CONTENEDORES PRINCIPALES                           */
+/* ============================================================ */
+
 .container {
-  width: 1200px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 header {
@@ -181,6 +189,7 @@ header {
   top: 0;
   z-index: 1000;
   min-height: 76px;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -292,6 +301,10 @@ header {
   font-weight: 700;
 }
 
+/* ══════════════════════════════════════════════════════════════ */
+/*                    2️⃣  HERO SECTION                            */
+/* ══════════════════════════════════════════════════════════════ */
+
 .hero {
   padding: 100px 0;
   display: grid;
@@ -299,6 +312,8 @@ header {
   gap: clamp(32px, 5vw, 96px);
   align-items: start;
   justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-content {
@@ -457,32 +472,47 @@ header {
   filter: grayscale(0%) contrast(100%);
 }
 
+/* ══════════════════════════════════════════════════════════════ */
+/*                    3️⃣  STATISTICS SECTION                      */
+/* ══════════════════════════════════════════════════════════════ */
+
 .stats-bar {
   border: 2px solid var(--border-color);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  padding: 30px;
+  padding: 40px 30px;
   margin-bottom: 100px;
   background: var(--surface);
+  box-sizing: border-box;
 }
 
 .stat-item {
   min-width: 0;
   border-right: 1px solid var(--border-color);
-  padding: 0 40px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
 }
 
 .stat-item:last-child {
   border-right: none;
 }
 
+.stat-item:last-child .stat-val {
+  font-size: clamp(0.85rem, 1.4vw, 1.5rem);
+  letter-spacing: -0.04em;
+}
+
 .stat-val {
-  font-size: clamp(2rem, 2.8vw, 2.5rem);
+  font-size: clamp(0.85rem, 1.4vw, 1.5rem);
   font-weight: 800;
   font-family: Syne, sans-serif;
   color: var(--accent-retro);
-  line-height: 0.95;
-  overflow-wrap: anywhere;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 .stat-label {
@@ -509,17 +539,28 @@ header {
   background: var(--border-color);
 }
 
+/* ══════════════════════════════════════════════════════════════ */
+/*                    4️⃣  PORTFOLIO GRID                          */
+/* ══════════════════════════════════════════════════════════════ */
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 100px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .project-card {
   border: 2px solid var(--border-color);
   background: var(--surface);
   transition: 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .project-card-link {
@@ -550,7 +591,11 @@ header {
 }
 
 .project-info {
-  padding: 20px;
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
 
 .project-tag {
@@ -587,6 +632,10 @@ header {
   margin: -20px 0 30px;
   line-height: 1.7;
 }
+
+/* ══════════════════════════════════════════════════════════════ */
+/*                    5️⃣  MARQUEE SECTION                         */
+/* ══════════════════════════════════════════════════════════════ */
 
 .marquee-container {
   border-top: 2px solid var(--border-color);
@@ -810,6 +859,10 @@ footer {
   text-transform: uppercase;
 }
 
+/* ══════════════════════════════════════════════════════════════ */
+/*                    6️⃣  CONTACT SECTION                         */
+/* ══════════════════════════════════════════════════════════════ */
+
 .contact-section {
   margin-bottom: 100px;
 }
@@ -818,15 +871,21 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .contact-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   border: 2px solid var(--border-color);
   background: var(--surface);
-  padding: 24px;
+  padding: 32px;
   text-decoration: none;
   transition: 0.3s;
+  min-height: 200px;
+  box-sizing: border-box;
 }
 
 .contact-card:hover {
@@ -835,28 +894,56 @@ footer {
   box-shadow: 8px 8px 0px var(--accent-retro);
 }
 
+/* ══════════════════════════════════════════════════════════════ */
+/*                    7️⃣  FOOTER SECTION                          */
+/* ══════════════════════════════════════════════════════════════ */
+
 .site-footer {
   padding-top: 48px;
 }
 
-.site-footer a {
-  color: var(--text-primary);
-  text-decoration: none;
-  margin-left: 14px;
-  font-size: 0.74rem;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
-}
-
-.site-footer .footer-logo p {
-  font-size: 0.72rem !important;
-  margin-bottom: 8px !important;
+.site-footer .footer-tag {
+  color: var(--accent-retro);
+  font-size: 0.72rem;
+  margin-bottom: 8px;
 }
 
 .site-footer .footer-logo h2 {
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   line-height: 0.95;
 }
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: flex-end;
+}
+
+.footer-social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  justify-content: flex-end;
+}
+
+.site-footer a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+}
+
+/* ══════════════════════════════════════════════════════════════ */
+/*                    8️⃣  PROJECT DETAIL PAGES                    */
+/* ══════════════════════════════════════════════════════════════ */
 
 .project-detail {
   padding: 80px 0 100px;
@@ -945,6 +1032,10 @@ footer {
     transform: translateY(0);
   }
 }
+
+/* ══════════════════════════════════════════════════════════════ */
+/*                    🔟  RESPONSIVE DESIGN                       */
+/* ══════════════════════════════════════════════════════════════ */
 
 /* Responsive styles for mobile */
 @media (max-width: 768px) {
@@ -1085,8 +1176,8 @@ footer {
   }
 
   .stats-bar {
-    flex-direction: column;
-    padding: 16px;
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
     margin-bottom: 40px;
   }
 
@@ -1172,14 +1263,14 @@ footer {
     font-size: 1.7rem;
   }
 
-  footer > div:last-child {
-    text-align: left !important;
+  .footer-right {
+    align-items: flex-start;
+    width: 100%;
   }
 
-  footer a {
-    display: block;
-    margin-left: 0 !important;
-    margin-bottom: 10px;
+  .footer-nav,
+  .footer-social {
+    justify-content: flex-start;
   }
 
   .btn-retro {
@@ -1270,12 +1361,17 @@ footer {
     gap: 25px;
   }
 
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   .stats-bar {
-    padding: 25px;
+    padding: 32px 25px;
   }
 
   .stat-item {
-    padding: 0 25px;
+    padding: 20px 20px;
   }
 }
 

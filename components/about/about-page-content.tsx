@@ -10,15 +10,15 @@ const ABOUT_CONTENT = {
     eyebrow: "SOBRE_MI.EXE",
     title: "Sobre Ing. Jesus Delgado",
     intro:
-      "Soy Jesus Delgado, ingeniero de software con base en Colombia, enfocado en construir productos que combinan Python, arquitectura backend, sistemas de AI y ejecución web moderna. Mi trabajo suele ubicarse donde se cruzan la necesidad de producto y la profundidad técnica: automatización, APIs, herramientas internas, flujos de machine learning, visión artificial y plataformas web listas para producción. Me interesa construir software útil, no demos. Eso implica flujos de datos más claros, operación más simple, ciclos de entrega más rápidos y sistemas que un equipo realmente pueda mantener después del lanzamiento. He trabajado en proyectos para Colombia, Venezuela y Estados Unidos, con foco en servicios backend, features AI-first, producto full stack y despliegues pensados para uso real.",
+      "Soy Jesus Delgado, ingeniero de sistemas egresado de la UNEFA, Universidad Nacional Experimental Politécnica de la Fuerza Armada Nacional, en Venezuela, y actualmente residente en Colombia. Trabajo como ingeniero de software y desarrollador freelance, construyendo aplicaciones multiplataforma, servicios backend, productos web y soluciones orientadas a operación real. Mi enfoque combina Python, Django, Django REST, arquitectura backend, despliegues cloud y desarrollo full stack con criterio de producto. También soy cofundador de creativeferres.com y he participado en iniciativas de desarrollo como By Coding Solutions. Me interesa construir software útil, mantenible y listo para producción, con especial atención a automatización, APIs, performance, despliegue y escalabilidad.",
     identityTag: "#IDENTIDAD",
     identityTitle: "Perfil Profesional",
     identityBody:
-      "Nombre completo: Ing. Jesus Delgado. Rol: Python Developer y AI Engineer. Base: Colombia. Disciplina: ingeniería de software enfocada en backend, inteligencia artificial aplicada y entrega de producto digital. La identidad pública del portafolio y las redes se mantiene consistente alrededor del nombre profesional Ing. Jesus Delgado.",
+      "Nombre completo: Ing. Jesus Delgado. Formación: ingeniero de sistemas egresado de la UNEFA en Venezuela. Residencia actual: Colombia. Rol profesional: ingeniero de software, desarrollador freelance y constructor de aplicaciones multiplataforma. La identidad pública del portafolio se centra en backend, producto digital, despliegue cloud y soluciones listas para producción.",
     bioTag: "#BIO",
     bioTitle: "Biografía en Primera Persona",
     bioBody:
-      "Me gusta construir sistemas que reducen fricción operativa. En la práctica eso significa trabajar sobre APIs, automatización, lógica de producto, performance y features con AI que mejoran cómo un equipo entrega o cómo un usuario interactúa con el software. Suelo trabajar cerca del problema de negocio, traduciendo requerimientos a decisiones técnicas estables sin sobreingeniería. Mi stack más fuerte gira alrededor de Python, pero me muevo con soltura entre backend, frontend, mobile y despliegue cuando el proyecto lo exige.",
+      "Me gusta construir sistemas que reducen fricción operativa y que se puedan sostener después del lanzamiento. En la práctica eso significa trabajar sobre APIs, automatización, lógica de negocio, performance, infraestructura y experiencia de producto. Mi base más fuerte está en Python, Django y Django REST, pero también trabajo con aplicaciones multiplataforma, despliegues en Amazon Web Services, Hostinger, GoDaddy, CloudPanel y cPanel cuando el proyecto lo necesita. Actualmente trabajo desde Colombia como freelancer, apoyando clientes y productos que necesitan desarrollo serio, mantenimiento continuo y soluciones que funcionen en producción.",
     timelineTag: "#TRAYECTORIA",
     timelineTitle: "Cronología Profesional",
     specialtiesTag: "#ESPECIALIDADES",
@@ -31,28 +31,28 @@ const ABOUT_CONTENT = {
     timeline: [
       {
         year: "2026",
-        title: "Python Developer & AI Engineer",
+        title: "Ingeniero de Software y Freelancer en Colombia",
         description:
-          "Trabajo en Colombia, Venezuela y Estados Unidos sobre flujos de machine learning, sistemas backend, automatizaciones y plataformas web listas para producción.",
+          "Trabajo desde Colombia como freelancer en desarrollo de software, aplicaciones multiplataforma, backend, despliegue cloud y soluciones orientadas a producción para distintos mercados.",
       },
       {
         year: "2024-2025",
-        title: "Entrega Full-Stack y Productos AI-First",
+        title: "Cofundador y Desarrollo de Producto",
         description:
-          "Desarrollo soluciones con Next.js, Django, React Native, LangChain y despliegues cloud para equipos que necesitan ejecución confiable y ciclos de iteración más rápidos.",
+          "Impulso proyectos de producto y desarrollo digital, incluyendo la cofundación de creativeferres.com y trabajo técnico en soluciones web, backend y despliegue para equipos que necesitan velocidad y confiabilidad.",
       },
       {
-        year: "2021-2023",
-        title: "Backend y Product Engineering",
+        year: "Formación Base",
+        title: "Ingeniería de Sistemas en UNEFA",
         description:
-          "Enfoque en APIs, herramientas internas, flujos de datos y automatizaciones operativas con Python y Django para negocios y equipos digitales.",
+          "Formación como ingeniero de sistemas en la Universidad Nacional Experimental Politécnica de la Fuerza Armada Nacional, en Venezuela, base sobre la que desarrollo mi trabajo en software e infraestructura.",
       },
     ],
     specialties: [
-      "Sistemas backend con Python, Django y Django REST Framework.",
-      "Machine learning, deep learning y computer vision conectados a necesidades reales de producto.",
-      "Desarrollo web moderno con Next.js y React, con foco en performance y fundamentos SEO.",
-      "Productos mobile y AI-first con React Native, Expo, LangChain y despliegues cloud.",
+      "Sistemas backend con Python, Django, Django REST Framework y APIs listas para producción.",
+      "Aplicaciones web y multiplataforma con enfoque en producto, operación y mantenimiento continuo.",
+      "Despliegue e infraestructura con Amazon Web Services, CloudPanel, cPanel, Hostinger y GoDaddy.",
+      "Trabajo técnico orientado a software real: arquitectura, performance, automatización y entrega continua.",
     ],
     imageAlt: "Retrato de Ing. Jesus Delgado, Python Developer y AI Engineer.",
   },
@@ -60,15 +60,15 @@ const ABOUT_CONTENT = {
     eyebrow: "ABOUT_ME.EXE",
     title: "About Ing. Jesus Delgado",
     intro:
-      "I am Jesus Delgado, a software engineer based in Colombia focused on building products that combine Python, backend architecture, AI systems, and modern web execution. My work usually sits where product needs and technical depth meet: automation, APIs, internal tools, machine learning workflows, computer vision, and web platforms prepared for production. I care about useful software, not just demos. That means clearer data flows, simpler operations, faster delivery cycles, and systems that teams can actually maintain after launch. I have worked across Colombia, Venezuela, and the United States on backend services, AI-first features, full-stack delivery, and deployments designed for real product usage.",
+      "I am Jesus Delgado, a systems engineer graduated from UNEFA in Venezuela and currently based in Colombia. I work as a software engineer and freelance developer, building cross-platform applications, backend services, web products, and production-oriented software solutions. My focus combines Python, Django, Django REST, backend architecture, cloud deployment, and full-stack delivery with product awareness. I am also a co-founder of creativeferres.com and have contributed to development initiatives such as By Coding Solutions. I care about software that is useful, maintainable, and ready for real-world use.",
     identityTag: "#IDENTITY",
     identityTitle: "Professional Profile",
     identityBody:
-      "Full name: Ing. Jesus Delgado. Role: Python Developer and AI Engineer. Base: Colombia. Discipline: software engineering focused on backend systems, applied AI, and digital product delivery. The public identity across the portfolio and social platforms stays aligned with the professional name Ing. Jesus Delgado.",
+      "Full name: Ing. Jesus Delgado. Education: systems engineer graduated from UNEFA in Venezuela. Current base: Colombia. Professional role: software engineer, freelance developer, and cross-platform application builder. The portfolio identity is centered on backend systems, digital product delivery, cloud deployment, and production-ready software.",
     bioTag: "#BIO",
     bioTitle: "First-Person Bio",
     bioBody:
-      "I like building systems that remove operational friction. In practice, that means working on APIs, automation, product logic, performance, and AI features that improve how a team ships or how a user interacts with software. I tend to work close to the business problem, translating requirements into stable technical decisions instead of overengineering. My strongest stack is Python-centered, but I move comfortably across backend, frontend, mobile, and deployment layers when the project requires it.",
+      "I like building systems that reduce operational friction and keep working after launch. In practice, that means working on APIs, automation, business logic, performance, infrastructure, and product execution. My strongest base is Python, Django, and Django REST, but I also work on cross-platform applications and deployments using Amazon Web Services, Hostinger, GoDaddy, CloudPanel, and cPanel when the project requires it. I currently work from Colombia as a freelancer, helping clients and products that need serious software delivery, ongoing maintenance, and production-grade implementation.",
     timelineTag: "#TIMELINE",
     timelineTitle: "Professional Timeline",
     specialtiesTag: "#SPECIALTIES",
@@ -81,28 +81,28 @@ const ABOUT_CONTENT = {
     timeline: [
       {
         year: "2026",
-        title: "Python Developer & AI Engineer",
+        title: "Software Engineer and Freelancer in Colombia",
         description:
-          "Working across Colombia, Venezuela, and the United States on machine learning workflows, backend systems, automations, and production-ready web platforms.",
+          "Working from Colombia on software engineering, cross-platform applications, backend systems, cloud deployment, and production-oriented solutions for different markets.",
       },
       {
         year: "2024-2025",
-        title: "Full-Stack Delivery and AI-First Products",
+        title: "Product Building and Co-Founding Work",
         description:
-          "Built solutions with Next.js, Django, React Native, LangChain, and cloud deployments for teams that needed reliable execution and faster iteration.",
+          "Contributing to product and development initiatives, including the co-founding of creativeferres.com and technical work on web, backend, and deployment systems for teams that need reliable execution.",
       },
       {
-        year: "2021-2023",
-        title: "Backend and Product Engineering",
+        year: "Academic Foundation",
+        title: "Systems Engineering at UNEFA",
         description:
-          "Focused on APIs, internal tools, data workflows, and operational automations with Python and Django for digital businesses and internal teams.",
+          "Graduated as a systems engineer from UNEFA in Venezuela, building the foundation for my work in software engineering, infrastructure, and digital product delivery.",
       },
     ],
     specialties: [
-      "Python backend systems with Django and Django REST Framework.",
-      "Machine learning, deep learning, and computer vision workflows tied to real product needs.",
-      "Modern web delivery with Next.js and React, with attention to performance and SEO fundamentals.",
-      "Mobile and AI-first products with React Native, Expo, LangChain, and cloud deployment workflows.",
+      "Production backend systems with Python, Django, Django REST Framework, and API design.",
+      "Cross-platform and web application development with a focus on product delivery and maintainability.",
+      "Deployment and infrastructure work with Amazon Web Services, CloudPanel, cPanel, Hostinger, and GoDaddy.",
+      "Technical execution centered on architecture, performance, automation, and stable software delivery.",
     ],
     imageAlt: "Portrait of Ing. Jesus Delgado, Python Developer and AI Engineer.",
   },
@@ -143,19 +143,7 @@ export function AboutPageContent() {
             </div>
           </div>
 
-          <div className="project-card">
-            <div className="project-info">
-              <span className="project-tag">{t.timelineTag}</span>
-              <h2 className="project-title">{t.timelineTitle}</h2>
-              <ul className="project-detail-list">
-                {t.timeline.map((item) => (
-                  <li key={item.year + item.title}>
-                    <strong>{item.year}</strong> {item.title}. {item.description}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+
 
           <div className="project-card">
             <div className="project-info">
@@ -172,23 +160,6 @@ export function AboutPageContent() {
             </div>
           </div>
 
-          <div className="project-card">
-            <div className="project-info">
-              <span className="project-tag">{t.linksTag}</span>
-              <h2 className="project-title">{t.linksTitle}</h2>
-              <div className="hero-actions">
-                <a href={profile.linkedin} target="_blank" rel="noreferrer" className="btn-secondary">
-                  LinkedIn
-                </a>
-                <a href={`https://github.com/${profile.githubUser}`} target="_blank" rel="noreferrer" className="btn-secondary">
-                  GitHub
-                </a>
-                <a href={profile.xUrl} target="_blank" rel="noreferrer" className="btn-secondary">
-                  X
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="hero-actions">
