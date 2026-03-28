@@ -1,14 +1,13 @@
 import type React from "react"
-import type { Metadata } from "next"
-import { Geist, Geist_Mono, Space_Mono, Syne } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Space_Mono, Syne } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Footer } from "@/components/navigation/footer"
 import { Navbar } from "@/components/navigation/navbar"
 import { SiteProvider } from "@/components/providers/site-provider"
+import { RootSchemaScripts } from "@/components/seo/schema-scripts"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _spaceMono = Space_Mono({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -38,9 +37,13 @@ export const metadata: Metadata = {
     "LangChain",
     "AWS",
   ],
-  generator: "v0.app",
   alternates: {
     canonical: "/",
+    languages: {
+      es: "/",
+      en: "/",
+      "x-default": "/",
+    },
   },
   openGraph: {
     title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
@@ -50,12 +53,21 @@ export const metadata: Metadata = {
     siteName: "Ing. Jesus Delgado",
     locale: "es_CO",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ing. Jesus Delgado - Python Developer & AI Engineer",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
     description:
       "Portfolio focused on Python, machine learning, deep learning, computer vision, Django, Next.js, React Native, Expo, LangChain, AWS, and production deployments.",
+    images: ["/og-image.jpg"],
   },
   icons: {
     icon: [
@@ -67,6 +79,11 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -74,7 +91,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${_spaceMono.variable} ${_syne.variable} font-sans antialiased`}>
+      <head>
+        <link rel="preconnect" href="https://images.unsplash.com" />
+        <RootSchemaScripts />
+      </head>
+      <body className={`${_spaceMono.variable} ${_syne.variable} antialiased`}>
         <SiteProvider>
           <Navbar />
           <main>{children}</main>

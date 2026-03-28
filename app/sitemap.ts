@@ -7,15 +7,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: `${siteUrl}/`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 1,
+      lastModified: "2026-03-28",
+    },
+    {
+      url: `${siteUrl}/about`,
+      lastModified: "2026-03-28",
+    },
+    {
+      url: `${siteUrl}/privacy`,
+      lastModified: "2026-03-28",
     },
     ...regionalProjects.map((project) => ({
       url: `${siteUrl}/projects/${project.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
+      lastModified: "2026-03-28",
     })),
   ]
 }

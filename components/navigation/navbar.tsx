@@ -8,10 +8,16 @@ import { JesusDelgadoLogo } from "@/components/ui/logo"
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [statusText, setStatusText] = useState("SYS_UP: 00:00:00 | CPU: 12%")
   const { lang, setLang } = useSiteLanguage()
   const t = homeContent[lang]
+  const aboutLabel = lang === "es" ? "SOBRE MI" : "ABOUT"
+  const testimonialsLabel = lang === "es" ? "TESTIMONIOS" : "TESTIMONIALS"
 
   useEffect(() => {
+    let frameId = 0
+    let lastSecond = ""
+
     const updateClock = () => {
       const now = new Date()
       const timeStr =
@@ -20,16 +26,17 @@ export function Navbar() {
         now.getMinutes().toString().padStart(2, "0") +
         ":" +
         now.getSeconds().toString().padStart(2, "0")
-      const statusElement = document.querySelector(".system-status")
 
-      if (statusElement) {
-        statusElement.textContent = `SYS_UP: ${timeStr} | CPU: ${Math.floor(Math.random() * 20) + 5}%`
+      if (timeStr !== lastSecond) {
+        lastSecond = timeStr
+        setStatusText(`SYS_UP: ${timeStr} | CPU: 12%`)
       }
+
+      frameId = window.requestAnimationFrame(updateClock)
     }
 
-    updateClock()
-    const interval = setInterval(updateClock, 1000)
-    return () => clearInterval(interval)
+    frameId = window.requestAnimationFrame(updateClock)
+    return () => window.cancelAnimationFrame(frameId)
   }, [])
 
   const closeMenu = () => setMenuOpen(false)
@@ -53,6 +60,9 @@ export function Navbar() {
         </button>
         <div className={menuOpen ? "header-actions is-open" : "header-actions"}>
           <nav className="nav-links">
+            <Link href="/about" onClick={closeMenu}>
+              {aboutLabel}
+            </Link>
             <a href="/#work" onClick={closeMenu}>
               {t.nav.work}
             </a>
@@ -61,6 +71,9 @@ export function Navbar() {
             </a>
             <a href="/#projects" onClick={closeMenu}>
               {t.nav.projects}
+            </a>
+            <a href="/#testimonials" onClick={closeMenu}>
+              {testimonialsLabel}
             </a>
             <a href="/#contact" onClick={closeMenu}>
               {t.nav.contact}
@@ -88,7 +101,7 @@ export function Navbar() {
               EN
             </button>
           </div>
-          <div className="system-status">SYS_UP: 00:00:00 | CPU: 0%</div>
+          <div className="system-status">{statusText}</div>
         </div>
       </div>
     </header>

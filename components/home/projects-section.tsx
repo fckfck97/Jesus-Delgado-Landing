@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { homeContent, regionalProjects } from "@/components/home/data"
 import { useSiteLanguage } from "@/components/providers/site-provider"
@@ -18,7 +19,14 @@ export function ProjectsSection() {
             <div className="window-header" style={{ background: "#333", color: "#fff" }}>
               <span>{project.code}</span>
             </div>
-            <img src={project.image} alt={project.title[lang]} className="project-img" />
+            <Image
+              src={project.image}
+              alt={`${project.title[lang]}. ${project.summary[lang]}`}
+              className="project-img"
+              width={1200}
+              height={800}
+              loading="lazy"
+            />
             <div className="project-info">
               <span className="project-tag">{project.tag[lang]}</span>
               <h3 className="project-title">{project.title[lang]}</h3>

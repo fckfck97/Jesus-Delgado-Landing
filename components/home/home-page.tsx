@@ -5,6 +5,7 @@ import { ProjectsSection } from "@/components/home/projects-section"
 import { SpecialtiesSection } from "@/components/home/specialties-section"
 import { StackSection } from "@/components/home/stack-section"
 import { StatsSection } from "@/components/home/stats-section"
+import { TestimonialsSection } from "@/components/home/testimonials-section"
 
 export function HomePage() {
   return (
@@ -18,6 +19,7 @@ export function HomePage() {
       <div className="container">
         <StackSection />
         <ProjectsSection />
+        <TestimonialsSection />
         <ContactSection />
       </div>
     </>

@@ -1,11 +1,16 @@
 "use client"
 
+import Image from "next/image"
 import { homeContent, profile } from "@/components/home/data"
 import { useSiteLanguage } from "@/components/providers/site-provider"
 
 export function HeroSection() {
   const { lang } = useSiteLanguage()
   const t = homeContent[lang]
+  const heroImageAlt =
+    lang === "es"
+      ? "Retrato de Ing. Jesus Delgado, Python Developer y AI Engineer."
+      : "Portrait of Ing. Jesus Delgado, Python Developer and AI Engineer."
 
   return (
     <section className="hero">
@@ -29,18 +34,25 @@ export function HeroSection() {
         <div className="window-header">
           <span>JESUS_PROFILE.JPG</span>
           <div className="window-controls">
-            <button className="window-btn" aria-label="Minimize">
+            <button className="window-btn" aria-hidden="true" tabIndex={-1}>
               <span className="minimize-icon"></span>
             </button>
-            <button className="window-btn" aria-label="Maximize">
+            <button className="window-btn" aria-hidden="true" tabIndex={-1}>
               <span className="maximize-icon"></span>
             </button>
-            <button className="window-btn window-close" aria-label="Close">
+            <button className="window-btn window-close" aria-hidden="true" tabIndex={-1}>
               <span className="close-icon"></span>
             </button>
           </div>
         </div>
-        <img src={profile.heroImage} alt="Ing. Jesus Delgado hero image" className="hero-image" />
+        <Image
+          src={profile.heroImage}
+          alt={heroImageAlt}
+          className="hero-image"
+          priority
+          width={3264}
+          height={2448}
+        />
       </div>
     </section>
   )

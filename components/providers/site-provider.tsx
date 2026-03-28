@@ -12,10 +12,18 @@ type SiteContextValue = {
 const SiteContext = createContext<SiteContextValue | null>(null)
 
 export function SiteProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<SiteLanguage>("es")
+  const [lang, setLang] = useState<SiteLanguage>(() => {
+    if (typeof window === "undefined") {
+      return "es"
+    }
+
+    const storedLang = localStorage.getItem("lang")
+    return storedLang === "en" || storedLang === "es" ? storedLang : "es"
+  })
 
   useEffect(() => {
     document.documentElement.lang = lang
+    localStorage.setItem("lang", lang)
   }, [lang])
 
   const value = useMemo(() => ({ lang, setLang }), [lang])

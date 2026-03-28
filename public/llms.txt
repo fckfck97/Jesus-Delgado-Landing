@@ -1,0 +1,36 @@
+# Jesus Delgado
+
+> Python Developer y AI Engineer especializado en machine learning, deep learning,
+> computer vision y sistemas web de producción.
+
+## Sobre mí
+Jesus Delgado (Ing. Jesus Delgado) es ingeniero de software con base en Colombia,
+especializado en desarrollo backend con Python y Django, aplicaciones web con Next.js,
+aplicaciones móviles con React Native y Expo, sistemas de inteligencia artificial con
+LangChain, y despliegues en AWS y Docker. Ha desarrollado proyectos en Colombia,
+Venezuela y Estados Unidos.
+
+## Especialidades
+- Machine Learning y Deep Learning con Python
+- Computer Vision y reconocimiento facial
+- APIs backend con Django y Django REST Framework
+- Aplicaciones web con Next.js y React
+- Aplicaciones móviles con React Native y Expo
+- Desarrollo AI-first con LangChain
+- Despliegues en AWS, Docker, PostgreSQL
+
+## Stack Activo
+Python, Django, Django REST, React, Next.js, React Native, Expo, LangChain,
+AWS, Docker, PostgreSQL, JWT
+
+## Proyectos
+- Colombia: https://devjesusdelgado.com/projects/colombia-digital-platforms
+- Venezuela: https://devjesusdelgado.com/projects/venezuela-ai-backend-systems
+- USA: https://devjesusdelgado.com/projects/usa-cloud-ai-products
+
+## Contacto
+- LinkedIn: https://www.linkedin.com/in/gotzellll
+- GitHub: https://github.com/fckfck97
+- X: https://x.com/_GodZell
+- Email: themurder261@gmail.com
+- Web: https://devjesusdelgado.com
