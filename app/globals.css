@@ -459,14 +459,15 @@ header {
 
 .stats-bar {
   border: 2px solid var(--border-color);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   padding: 30px;
   margin-bottom: 100px;
   background: var(--surface);
 }
 
 .stat-item {
-  flex: 1;
+  min-width: 0;
   border-right: 1px solid var(--border-color);
   padding: 0 40px;
 }
@@ -476,16 +477,19 @@ header {
 }
 
 .stat-val {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 2.8vw, 2.5rem);
   font-weight: 800;
   font-family: Syne, sans-serif;
   color: var(--accent-retro);
+  line-height: 0.95;
+  overflow-wrap: anywhere;
 }
 
 .stat-label {
   font-size: 0.8rem;
   color: var(--text-secondary);
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 }
 
 .section-title {
