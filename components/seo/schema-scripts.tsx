@@ -17,7 +17,12 @@ export function RootSchemaScripts() {
     honorificPrefix: "Ing.",
     jobTitle: "Python Developer & AI Engineer",
     url: SITE_URL,
-    image: `${SITE_URL}/img/jesus.jpeg`,
+    image: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/img/jesus.jpeg`,
+      width: 380,
+      height: 285,
+    },
     sameAs: [
       "https://www.linkedin.com/in/gotzellll",
       "https://x.com/_GodZell",
@@ -36,6 +41,7 @@ export function RootSchemaScripts() {
     ],
     contactPoint: {
       "@type": "ContactPoint",
+      contactType: "customer support",
       email: "themurder261@gmail.com",
       availableLanguage: ["Spanish", "English"],
     },
@@ -81,28 +87,37 @@ export function HomePageSchemaScripts() {
     name: "Core Services",
     itemListElement: [
       {
-        "@type": "Service",
+        "@type": "ListItem",
         position: 1,
-        name: "Machine Learning Solutions",
-        serviceType: "Machine Learning",
-        provider: { "@id": `${SITE_URL}/#person` },
-        areaServed: ["Colombia", "Venezuela", "United States"],
+        item: {
+          "@type": "Service",
+          name: "Machine Learning Solutions",
+          serviceType: "Machine Learning",
+          provider: { "@id": `${SITE_URL}/#person` },
+          areaServed: ["Colombia", "Venezuela", "United States"],
+        },
       },
       {
-        "@type": "Service",
+        "@type": "ListItem",
         position: 2,
-        name: "Computer Vision Systems",
-        serviceType: "Computer Vision",
-        provider: { "@id": `${SITE_URL}/#person` },
-        areaServed: ["Colombia", "Venezuela", "United States"],
+        item: {
+          "@type": "Service",
+          name: "Computer Vision Systems",
+          serviceType: "Computer Vision",
+          provider: { "@id": `${SITE_URL}/#person` },
+          areaServed: ["Colombia", "Venezuela", "United States"],
+        },
       },
       {
-        "@type": "Service",
+        "@type": "ListItem",
         position: 3,
-        name: "Full-Stack Web and Mobile Development",
-        serviceType: "Full-Stack Development",
-        provider: { "@id": `${SITE_URL}/#person` },
-        areaServed: ["Colombia", "Venezuela", "United States"],
+        item: {
+          "@type": "Service",
+          name: "Full-Stack Web and Mobile Development",
+          serviceType: "Full-Stack Development",
+          provider: { "@id": `${SITE_URL}/#person` },
+          areaServed: ["Colombia", "Venezuela", "United States"],
+        },
       },
     ],
   }
@@ -155,12 +170,6 @@ export function ProjectSchemaScripts({
       {
         "@type": "ListItem",
         position: 2,
-        name: "Projects",
-        item: `${SITE_URL}/#projects`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
         name: title,
         item: projectUrl,
       },

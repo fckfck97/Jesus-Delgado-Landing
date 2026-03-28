@@ -56,7 +56,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         country={project.country}
         slug={project.slug}
         title={project.title.en}
-        summary={`${project.summary.es} ${project.summary.en}`}
+        summary={project.summary.en}
       />
       <ProjectDetailContent project={project} />
     </div>
