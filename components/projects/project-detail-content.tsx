@@ -30,11 +30,13 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
     approach: project.approach[lang],
     outcomes: project.outcomes[lang],
     highlights: project.highlights[lang],
+    stackDetail: project.stackDetail[lang],
     breadcrumbProjects: lang === "es" ? "Proyectos" : "Projects",
     summaryTitle: lang === "es" ? "Resumen" : "Summary",
     approachTitle: lang === "es" ? "Enfoque" : "Approach",
     outcomesTitle: lang === "es" ? "Resultados" : "Outcomes",
     highlightsTitle: lang === "es" ? "Logros" : "Highlights",
+    stackDetailTitle: lang === "es" ? "Decisiones Técnicas" : "Technical Decisions",
     backToProjects: lang === "es" ? "Volver a proyectos" : "Back to projects",
     contact: lang === "es" ? "Contactar" : "Contact",
     imageAlt:
@@ -122,6 +124,15 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
                 <li key={item}>{item}</li>
               ))}
             </ul>
+          </div>
+        </div>
+        <div className="project-card">
+          <div className="project-info">
+            <span className="project-tag">#STACK #ARCHITECTURE</span>
+            <h2 className="project-title">{content.stackDetailTitle}</h2>
+            {content.stackDetail.split("\n\n").map((paragraph, i) => (
+              <p key={i} className="project-copy">{paragraph}</p>
+            ))}
           </div>
         </div>
       </div>

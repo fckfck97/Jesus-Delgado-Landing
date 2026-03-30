@@ -41,7 +41,7 @@ export function RootSchemaScripts() {
     ],
     contactPoint: {
       "@type": "ContactPoint",
-      contactType: "customer support",
+      contactType: "technical support",
       email: "themurder261@gmail.com",
       availableLanguage: ["Spanish", "English"],
     },

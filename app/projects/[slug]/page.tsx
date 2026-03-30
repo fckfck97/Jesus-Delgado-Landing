@@ -27,11 +27,6 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
     description: `${project.summary.en} ${project.summary.es}`,
     alternates: {
       canonical: `/projects/${project.slug}`,
-      languages: {
-        es: `/projects/${project.slug}`,
-        en: `/projects/${project.slug}`,
-        "x-default": `/projects/${project.slug}`,
-      },
     },
     openGraph: {
       title: `${project.title.en} | ${project.title.es}`,

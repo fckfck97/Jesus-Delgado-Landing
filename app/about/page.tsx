@@ -7,11 +7,6 @@ export const metadata: Metadata = {
     "About / Sobre mi: Ing. Jesus Delgado, software engineer focused on Python, AI engineering, computer vision, backend systems, and production web platforms.",
   alternates: {
     canonical: "/about",
-    languages: {
-      es: "/about",
-      en: "/about",
-      "x-default": "/about",
-    },
   },
 }
 

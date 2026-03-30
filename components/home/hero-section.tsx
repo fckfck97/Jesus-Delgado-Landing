@@ -52,6 +52,7 @@ export function HeroSection() {
           priority
           width={3264}
           height={2448}
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
     </section>

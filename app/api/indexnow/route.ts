@@ -3,7 +3,7 @@ import { regionalProjects } from "@/components/home/data"
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://devjesusdelgado.com"
 const INDEXNOW_ENDPOINT = "https://api.indexnow.org/indexnow"
-const INDEXNOW_KEY = "c4b8d2e9f1a6475e8b3c9d0a1f2e4b6c"
+const INDEXNOW_KEY = process.env.INDEXNOW_KEY ?? "c4b8d2e9f1a6475e8b3c9d0a1f2e4b6c"
 
 function getDefaultUrls() {
   return [

@@ -123,7 +123,7 @@ export function AboutPageContent() {
           <div className="window-header">
             <span>JESUS_DELGADO_PROFILE.JPG</span>
           </div>
-          <Image src={profile.heroImage} alt={t.imageAlt} className="project-img project-detail-image" width={3264} height={2448} priority />
+          <Image src={profile.heroImage} alt={t.imageAlt} className="project-img project-detail-image" width={3264} height={2448} priority sizes="(max-width: 768px) 100vw, 60vw" />
         </div>
 
         <div className="project-detail-grid">
@@ -143,7 +143,21 @@ export function AboutPageContent() {
             </div>
           </div>
 
-
+          <div className="project-card">
+            <div className="project-info">
+              <span className="project-tag">{t.timelineTag}</span>
+              <h2 className="project-title">{t.timelineTitle}</h2>
+              <ul className="project-detail-list">
+                {t.timeline.map((item) => (
+                  <li key={item.year}>
+                    <strong>{item.year} — {item.title}</strong>
+                    <br />
+                    {item.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
           <div className="project-card">
             <div className="project-info">
@@ -157,6 +171,30 @@ export function AboutPageContent() {
               <p className="project-copy">
                 {t.stackLead} {technologies.join(", ")}.
               </p>
+            </div>
+          </div>
+
+          <div className="project-card">
+            <div className="project-info">
+              <span className="project-tag">{t.linksTag}</span>
+              <h2 className="project-title">{t.linksTitle}</h2>
+              <ul className="project-detail-list">
+                <li>
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+                    LinkedIn — linkedin.com/in/gotzellll
+                  </a>
+                </li>
+                <li>
+                  <a href={`https://github.com/${profile.githubUser}`} target="_blank" rel="noopener noreferrer">
+                    GitHub — github.com/{profile.githubUser}
+                  </a>
+                </li>
+                <li>
+                  <a href={profile.xUrl} target="_blank" rel="noopener noreferrer">
+                    X — {profile.xHandle}
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
 

@@ -39,11 +39,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
-    languages: {
-      es: "/",
-      en: "/",
-      "x-default": "/",
-    },
   },
   openGraph: {
     title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",

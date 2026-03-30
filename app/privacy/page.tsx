@@ -7,11 +7,10 @@ export const metadata: Metadata = {
     "Privacy Policy / Politica de Privacidad for devjesusdelgado.com covering analytics, contact data, and how project inquiries are handled.",
   alternates: {
     canonical: "/privacy",
-    languages: {
-      es: "/privacy",
-      en: "/privacy",
-      "x-default": "/privacy",
-    },
+  },
+  robots: {
+    index: false,
+    follow: true,
   },
 }
 
