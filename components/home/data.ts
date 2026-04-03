@@ -33,6 +33,279 @@ export const technologies = [
   "CSS3",
 ] as const
 
+const colombiaFeaturedProjects = [
+  {
+    slug: "mikiguiki",
+    name: "Mikiguiki",
+    description: {
+      es: "Plataforma de streaming con experiencia web y movil, enfocada en contenidos digitales y nuevas formas de entretenimiento.",
+      en: "Streaming platform with web and mobile experience, focused on digital content and new entertainment formats.",
+    },
+    features: {
+      es: [
+        "Gestion de usuarios y perfiles",
+        "Suscripciones y monetizacion",
+        "Catalogo y reproduccion de contenido",
+        "Panel administrativo",
+        "Notificaciones",
+      ],
+      en: [
+        "User and profile management",
+        "Subscriptions and monetization",
+        "Content catalog and playback",
+        "Admin panel",
+        "Notifications",
+      ],
+    },
+    url: "https://mikiguiki.com/",
+    appStoreUrl: "https://apps.apple.com/us/app/mikiguiki/id6748412273",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.ovalcampus.mikiguikiapp",
+  },
+  {
+    slug: "yuancity",
+    name: "Yuancity",
+    description: {
+      es: "Marketplace y tienda de dropshipping en Colombia: puedes importar, traer, vender y tambien publicar productos dentro de la app por comision.",
+      en: "Marketplace and dropshipping store in Colombia where users can import, sell, and publish products inside the app on a commission model.",
+    },
+    features: {
+      es: [
+        "Catalogo y buscador con filtros",
+        "Publicacion de productos por vendedores (modelo comision)",
+        "Flujo de compra y checkout",
+        "Gestion de pedidos y estados",
+        "Panel admin y metricas de ventas",
+      ],
+      en: [
+        "Catalog and filtered search",
+        "Seller product publishing with commission model",
+        "Purchase and checkout flow",
+        "Order and status management",
+        "Admin panel and sales metrics",
+      ],
+    },
+    url: "https://yuancity.com/",
+    appStoreUrl: "https://apps.apple.com/us/app/yuan-city/id6755722239",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.ovalcampus.yuancity",
+  },
+  {
+    slug: "allentown-university",
+    name: "Allentown University",
+    description: {
+      es: "Portal universitario con gestion academica completa y videoconferencias web. Arquitectura preparada para expansion movil.",
+      en: "University portal with full academic management and web videoconferencing. Architecture prepared for mobile expansion.",
+    },
+    features: {
+      es: [
+        "Portal estudiantil y docente",
+        "Sistema de calificaciones",
+        "Biblioteca digital",
+        "Campus virtual",
+        "Videoconferencias en web",
+      ],
+      en: [
+        "Student and faculty portal",
+        "Grading system",
+        "Digital library",
+        "Virtual campus",
+        "Web videoconferencing",
+      ],
+    },
+    url: "https://allentownuniversity.com/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+  {
+    slug: "greencloset",
+    name: "Greencloset",
+    description: {
+      es: "Ecommerce sostenible de ropa de segunda mano: publicaciones, compra y venta, organizacion por categorias y experiencia enfocada en consumo responsable.",
+      en: "Sustainable second-hand fashion ecommerce for listings, buying and selling, category-based browsing, and responsible consumption.",
+    },
+    features: {
+      es: [
+        "Publicacion de prendas por vendedores",
+        "Catalogo por categorias y tallas",
+        "Gestion de inventario de publicaciones",
+        "Mensajeria y seguimiento de pedidos",
+        "Panel admin para moderacion y control",
+      ],
+      en: [
+        "Seller garment publishing",
+        "Catalog by categories and sizes",
+        "Listing inventory management",
+        "Messaging and order tracking",
+        "Admin moderation and control panel",
+      ],
+    },
+    url: "https://greencloset.shop/",
+    appStoreUrl: "https://apps.apple.com/co/app/green-closet/id6751541189",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.ovalcampus.greencloset",
+  },
+  {
+    slug: "tablechat",
+    name: "Tablechat",
+    description: {
+      es: "Plataforma de ecommerce y comunicacion que combina catalogo, interaccion directa y flujos de venta conversacional dentro del producto.",
+      en: "Ecommerce and communication platform combining catalog, direct interaction, and conversational selling flows inside the product.",
+    },
+    features: {
+      es: [
+        "Catalogo y paginas de producto",
+        "Mensajeria y atencion integrada",
+        "Gestion de pedidos",
+        "Panel admin y control de vendedores",
+        "Estructura lista para automatizacion",
+      ],
+      en: [
+        "Catalog and product pages",
+        "Integrated messaging and support",
+        "Order management",
+        "Admin panel and seller controls",
+        "Automation-ready structure",
+      ],
+    },
+    url: "https://tablechat.yesglobals.com/",
+    appStoreUrl: "https://apps.apple.com/co/app/tablechat/id6752120813",
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.ovalcampus.tabletchat",
+  },
+  {
+    slug: "empaquetadora-del-norte",
+    name: "Empaquetadora del Norte",
+    description: {
+      es: "Empresa agroindustrial lider en Norte de Santander especializada en empaquetado, envasado y comercializacion de aceite de palma, arroz, azucar y granos, con cobertura mayorista nacional e internacional.",
+      en: "Agroindustrial company leading in Norte de Santander, specialized in packaging, bottling, and distribution of palm oil, rice, sugar, and grains, with national and international wholesale coverage.",
+    },
+    features: {
+      es: [
+        "Empaquetado de arroz, azucar y granos",
+        "Envasado de aceite de palma y soya",
+        "Soplado de envases plasticos",
+        "Maquila para marcas aliadas",
+        "Logistica con flota propia",
+      ],
+      en: [
+        "Packaging of rice, sugar, and grains",
+        "Bottling of palm and soybean oil",
+        "Plastic container blowing",
+        "Contract manufacturing for partner brands",
+        "Logistics with own fleet",
+      ],
+    },
+    url: "https://empaquetadoradelnorte.com/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+  {
+    slug: "refinorte",
+    name: "REFINORTE",
+    description: {
+      es: "Complejo industrial integrado de refinacion de aceites comestibles, margarinas, shortenings, productos nutraceuticos intermedios y jaboneria, proyectado como la primera refinadora de aceite de palma con tecnologia avanzada en Latinoamerica.",
+      en: "Integrated industrial complex for refining edible oils, margarines, shortenings, intermediate nutraceutical products, and soap, projected as the first advanced-technology palm oil refinery in Latin America.",
+    },
+    features: {
+      es: [
+        "Refinacion de aceites comestibles y margarinas",
+        "Produccion de shortenings y nutraceuticos",
+        "Tecnologia de extraccion avanzada end-to-end",
+        "Impacto regional: empleos directos e indirectos",
+        "Sostenibilidad ambiental y excelencia operacional",
+      ],
+      en: [
+        "Edible oil and margarine refining",
+        "Shortening and nutraceutical production",
+        "Advanced end-to-end extraction technology",
+        "Regional impact: direct and indirect jobs",
+        "Environmental sustainability and operational excellence",
+      ],
+    },
+    url: "https://www.refinorte.com.co/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+  {
+    slug: "cafe-arduvi",
+    name: "Cafe Arduvi",
+    description: {
+      es: "Restaurante y cafe en Cucuta que une gastronomia con inclusion social activa, donde personas con capacidades diferentes son protagonistas del servicio bajo el modelo Arduvi de inclusion con amor.",
+      en: "Restaurant and cafe in Cucuta blending gastronomy with active social inclusion, where people with different abilities are central to the service under the Arduvi inclusion-with-love model.",
+    },
+    features: {
+      es: [
+        "Desayunos, almuerzos y menu diario",
+        "Cafe de especialidad, postres y tortas",
+        "Catering y servicio para eventos",
+        "Inclusion laboral de personas con capacidades diferentes",
+        "Acompanamiento psicosocial y sociolaboral",
+      ],
+      en: [
+        "Breakfasts, lunches, and daily menu",
+        "Specialty coffee, desserts, and cakes",
+        "Catering and event service",
+        "Employment inclusion for people with different abilities",
+        "Psychosocial and socio-labor support",
+      ],
+    },
+    url: "https://cafearduvi.com/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+  {
+    slug: "fundacion-arduvi",
+    name: "Fundacion Arduvi",
+    description: {
+      es: "Fundacion sin animo de lucro fundada en Cucuta en 2021 cuyo proposito es impulsar la inclusion laboral y social de poblacion migrante vulnerable, personas con discapacidad y grupos en riesgo social bajo el sello Inclusion con Amor.",
+      en: "Non-profit foundation established in Cucuta in 2021 focused on promoting labor and social inclusion of vulnerable migrant populations, people with disabilities, and at-risk groups under the Inclusion with Love model.",
+    },
+    features: {
+      es: [
+        "Inclusion laboral y social de poblacion vulnerable",
+        "Intervencion y atencion psicosocial",
+        "Insercion sociolaboral y comunitaria",
+        "Gestion del conocimiento e innovacion social",
+        "Sello Inclusion con Amor para organizaciones aliadas",
+      ],
+      en: [
+        "Labor and social inclusion of vulnerable populations",
+        "Psychosocial intervention and care",
+        "Community and socio-labor integration",
+        "Knowledge management and social innovation",
+        "Inclusion with Love seal for partner organizations",
+      ],
+    },
+    url: "https://fundacionarduvi.org/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+  {
+    slug: "cooagrovida",
+    name: "COOAGROVIDA",
+    description: {
+      es: "Cooperativa de familias campesinas del Catatumbo, Norte de Santander, dedicada a fortalecer el ciclo productivo agroindustrial y la comercializacion sostenible agricola, con vision de liderazgo nacional al 2030.",
+      en: "Cooperative of farming families from el Catatumbo, Norte de Santander, dedicated to strengthening the agroindustrial productive cycle and sustainable agricultural trade, with a national leadership vision by 2030.",
+    },
+    features: {
+      es: [
+        "Fortalecimiento del ciclo productivo agroindustrial",
+        "Comercializacion sostenible de productos agricolas",
+        "Gestion de proyectos publico-privado-populares",
+        "Desarrollo de capacidades organizativas y cooperativas",
+        "Acceso a mercados e infraestructura productiva",
+      ],
+      en: [
+        "Strengthening the agroindustrial productive cycle",
+        "Sustainable agricultural product trade",
+        "Public-private-community project management",
+        "Organizational and cooperative capacity development",
+        "Market access and productive infrastructure",
+      ],
+    },
+    url: "https://cooagrovida.com/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+] as const
+
 export const regionalProjects = [
   {
     slug: "colombia-digital-platforms",
@@ -83,6 +356,7 @@ export const regionalProjects = [
       es: "La base técnica de estos proyectos se construyó con una separación clara entre un frontend rápido e indexable y un backend estructurado capaz de manejar formularios, datos de usuarios y lógica de negocio de forma independiente. En el lado del frontend, Next.js con App Router fue elegido por su capacidad para entregar páginas renderizadas en servidor sin sacrificar interactividad. Esto fue relevante para clientes con objetivos SEO junto a sus necesidades operativas: el contenido necesitaba ser alcanzable por buscadores desde el primer día. Los componentes se organizaron por dominio en lugar de por tipo, manteniendo la lógica de negocio cerca de los elementos UI que la consumen. Se usó generación estática donde los datos eran predecibles y regeneración incremental para mantener páginas actualizadas sin rebuilds completos.\n\nEl backend Django se estructuró como API REST desde el inicio, incluso en proyectos de menor alcance. Esta decisión fue importante cuando los clientes necesitaron añadir una segunda capa de frontend, conectar una app mobile o exponer datos a una integración de terceros en medio del proyecto. Tener el contrato de API definido desde el principio significó que esas extensiones fueron adiciones independientes en lugar de reescrituras arquitectónicas. Django REST Framework gestionó serialización, permisos y validación de entradas con suficiente convención para evitar código repetitivo sin ocultar la lógica. PostgreSQL fue la base de datos principal: la estructura relacional fue crítica en proyectos que rastreaban leads, pedidos o usuarios en múltiples estados. Las migraciones de Django mantuvieron la evolución del esquema trazable y las restricciones a nivel de modelo previnieron problemas de calidad de datos antes de que llegaran a la API.\n\nPara despliegues, el enfoque combinó Vercel para el frontend Next.js y Hostinger o VPS para el backend Django. Esta separación permitió escalar de forma independiente, configurar dominios y simplificar la depuración. Scripts Python manejaron la capa de automatización: envíos de formularios activando secuencias de correo, exportaciones periódicas de datos y actualizaciones de estado fluyendo a través de colas de tareas basadas en Celery donde fue necesario. Esta capa redujo el trabajo manual para equipos de ventas y operaciones sin introducir dependencias SaaS adicionales. Los metadatos SEO se gestionaron a través de la API de Metadata de Next.js con datos estructurados en páginas clave, sitemap generado automáticamente y optimización de imágenes con next/image para controlar formato, tamaño y carga diferida sin infraestructura personalizada.",
       en: "The technical foundation for these Colombia projects was built around a clear division between a fast, indexable frontend and a structured backend capable of managing form submissions, user data, and business logic independently. On the frontend side, Next.js with the App Router was chosen for its ability to deliver server-rendered pages without sacrificing interactivity. This was relevant for clients who had SEO goals alongside their operational needs — content needed to be reachable by search engines from day one, not dependent on client-side rendering. Components were organized by domain rather than by type, keeping business logic close to the UI elements that consumed it. Static generation was used where data was predictable, and incremental regeneration kept pages fresh without full rebuilds.\n\nThe Django backend was structured as a REST API from the start, even in smaller-scope projects. This decision mattered when clients needed to add a second frontend layer, connect a mobile app, or expose data to a third-party integration mid-project. Having the API contract defined early meant those extensions were plug-in additions rather than architectural rewrites. Django REST Framework handled serialization, permissions, and input validation with enough convention to avoid boilerplate without hiding the logic. PostgreSQL was the primary database. Relational structure proved important for projects that tracked leads, orders, or users across multiple states. Django migrations kept schema evolution traceable, and model-level constraints prevented data quality issues before they reached the API layer.\n\nFor deployments, the approach combined Vercel for the Next.js frontend and Hostinger or a VPS for the Django backend. This split allowed independent scaling, domain configuration, and simplified debugging. Python scripts handled the automation layer: form submissions triggering email sequences, periodic data exports, and status updates flowing through lightweight Celery-based task queues where needed. This layer reduced manual effort for sales and operations teams without introducing a new SaaS dependency. On the SEO side, metadata was managed through Next.js Metadata API with structured data on key pages, auto-generated sitemaps, and image optimization via next/image to control format, sizing, and lazy loading without custom infrastructure. The cumulative result was a platform maintainable by a non-technical team for content updates while remaining fully extensible by a developer.",
     },
+    featuredProjects: colombiaFeaturedProjects,
   },
   {
     slug: "venezuela-ai-backend-systems",

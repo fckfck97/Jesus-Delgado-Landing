@@ -21,6 +21,7 @@ type ProjectDetailContentProps = {
 
 export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
   const { lang } = useSiteLanguage()
+  const featuredProjects = project.featuredProjects ?? []
 
   const content = {
     title: project.title[lang],
@@ -37,6 +38,16 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
     outcomesTitle: lang === "es" ? "Resultados" : "Outcomes",
     highlightsTitle: lang === "es" ? "Logros" : "Highlights",
     stackDetailTitle: lang === "es" ? "Decisiones Técnicas" : "Technical Decisions",
+    featuredProjectsTitle: lang === "es" ? "Proyectos Destacados" : "Featured Projects",
+    featuredProjectsIntro:
+      lang === "es"
+        ? "Listado de productos y plataformas construidos para este mercado. Puedes completar los enlaces web, App Store y Play Store directamente en el archivo de datos."
+        : "Selected products and platforms built for this market. Website, App Store, and Play Store links can be completed directly in the data file.",
+    featuresTitle: lang === "es" ? "Funciones clave" : "Key features",
+    websiteLabel: lang === "es" ? "Sitio web" : "Website",
+    appStoreLabel: lang === "es" ? "App Store" : "App Store",
+    playStoreLabel: lang === "es" ? "Play Store" : "Play Store",
+    pendingLinkLabel: lang === "es" ? "URL pendiente" : "URL pending",
     backToProjects: lang === "es" ? "Volver a proyectos" : "Back to projects",
     contact: lang === "es" ? "Contactar" : "Contact",
     imageAlt:
@@ -126,16 +137,64 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
             </ul>
           </div>
         </div>
-        <div className="project-card">
+        <div className="project-card project-card--stack">
           <div className="project-info">
             <span className="project-tag">#STACK #ARCHITECTURE</span>
             <h2 className="project-title">{content.stackDetailTitle}</h2>
-            {content.stackDetail.split("\n\n").map((paragraph, i) => (
-              <p key={i} className="project-copy">{paragraph}</p>
-            ))}
+            <div className="project-stack-columns">
+              {content.stackDetail.split("\n\n").map((paragraph, i) => (
+                <p key={i} className="project-copy">{paragraph}</p>
+              ))}
+            </div>
           </div>
         </div>
       </div>
+      {featuredProjects.length > 0 ? (
+        <div className="project-featured-section">
+          <span className="project-tag">#PRODUCTS #{project.country.toUpperCase()}</span>
+          <h2 className="project-title">{content.featuredProjectsTitle}</h2>
+          <p className="project-detail-copy">{content.featuredProjectsIntro}</p>
+          <div className="portfolio-grid project-featured-grid">
+            {featuredProjects.map((item) => {
+              const hasLinks = Boolean(item.url || item.appStoreUrl || item.playStoreUrl)
+
+              return (
+                <div className="project-card" key={item.slug}>
+                  <div className="project-info">
+                    <span className="project-tag">#{item.slug.toUpperCase()}</span>
+                    <h3 className="project-title">{item.name}</h3>
+                    <p className="project-copy">{item.description[lang]}</p>
+                    <p className="project-subtitle">{content.featuresTitle}</p>
+                    <ul className="project-detail-list">
+                      {item.features[lang].map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                    <div className="project-links">
+                      {item.url ? (
+                        <a href={item.url} target="_blank" rel="noreferrer" className="project-inline-link">
+                          {content.websiteLabel}
+                        </a>
+                      ) : null}
+                      {item.appStoreUrl ? (
+                        <a href={item.appStoreUrl} target="_blank" rel="noreferrer" className="project-inline-link">
+                          {content.appStoreLabel}
+                        </a>
+                      ) : null}
+                      {item.playStoreUrl ? (
+                        <a href={item.playStoreUrl} target="_blank" rel="noreferrer" className="project-inline-link">
+                          {content.playStoreLabel}
+                        </a>
+                      ) : null}
+                    </div>
+                    {!hasLinks ? <span className="project-link">{content.pendingLinkLabel}</span> : null}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      ) : null}
       <div className="hero-actions">
         <Link href="/#projects" className="btn-secondary">
           {content.backToProjects}
