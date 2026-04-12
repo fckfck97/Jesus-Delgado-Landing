@@ -2,9 +2,7 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Space_Mono, Syne } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { Footer } from "@/components/navigation/footer"
-import { Navbar } from "@/components/navigation/navbar"
-import { SiteProvider } from "@/components/providers/site-provider"
+import { headers } from "next/headers"
 import { RootSchemaScripts } from "@/components/seo/schema-scripts"
 import "./globals.css"
 
@@ -23,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://devjesusdelgado.com"),
   title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
   description:
-    "Portfolio focused on Python, machine learning, deep learning, computer vision, Django, Next.js, React Native, Expo, LangChain, AWS, and production deployments.",
+    "Portfolio of Ing. Jesus Delgado — Python developer and AI engineer building production-grade backend systems, computer vision applications, and full-stack products for clients in Colombia, Venezuela, and the United States.",
   keywords: [
     "Python developer",
     "AI engineer",
@@ -37,16 +35,11 @@ export const metadata: Metadata = {
     "LangChain",
     "AWS",
   ],
-  alternates: {
-    canonical: "/",
-  },
   openGraph: {
     title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
     description:
-      "Portfolio focused on Python, machine learning, deep learning, computer vision, Django, Next.js, React Native, Expo, LangChain, AWS, and production deployments.",
-    url: "/",
+      "Portfolio of Ing. Jesus Delgado — Python developer and AI engineer building production-grade backend systems, computer vision applications, and full-stack products for clients in Colombia, Venezuela, and the United States.",
     siteName: "Ing. Jesus Delgado",
-    locale: "es_CO",
     type: "website",
     images: [
       {
@@ -61,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
     description:
-      "Portfolio focused on Python, machine learning, deep learning, computer vision, Django, Next.js, React Native, Expo, LangChain, AWS, and production deployments.",
+      "Portfolio of Ing. Jesus Delgado — Python developer and AI engineer building production-grade backend systems, computer vision applications, and full-stack products for clients in Colombia, Venezuela, and the United States.",
     images: ["/og-image.jpg"],
   },
   icons: {
@@ -79,24 +72,24 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const headersList = await headers()
+  const lang = (headersList.get("x-lang") as "es" | "en") ?? "es"
+
   return (
-    <html lang="es">
+    <html lang={lang} suppressHydrationWarning>
       <head>
+        <link rel="preload" as="image" href="/img/jesus.webp" fetchPriority="high" />
         <link rel="preconnect" href="https://images.unsplash.com" />
         <RootSchemaScripts />
       </head>
       <body className={`${_spaceMono.variable} ${_syne.variable} antialiased`}>
-        <SiteProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
-          <Analytics />
-        </SiteProvider>
+        {children}
+        <Analytics />
       </body>
     </html>
   )

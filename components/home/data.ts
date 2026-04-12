@@ -4,10 +4,10 @@ export const profile = {
   xHandle: "@_GodZell",
   linkedin: "https://www.linkedin.com/in/gotzellll",
   xUrl: "https://x.com/_GodZell",
-  heroImage: "/img/jesus.jpeg",
+  heroImage: "/img/jesus.webp",
   whatsapp: "+573173030718",
   whatsappUrl: "https://wa.me/573173030718",
-  email: "themurder261@gmail.com",
+  email: "hola@devjesusdelgado.com",
 } as const
 
 export const technologies = [
@@ -311,7 +311,7 @@ export const regionalProjects = [
     slug: "colombia-digital-platforms",
     country: "Colombia",
     code: "COL_01",
-    image: "https://images.unsplash.com/photo-1523475472560-d2df97ec485c?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1523475472560-d2df97ec485c?w=700&q=75",
     tag: {
       es: "#COLOMBIA #WEB #AUTOMATION",
       en: "#COLOMBIA #WEB #AUTOMATION",
@@ -362,7 +362,7 @@ export const regionalProjects = [
     slug: "venezuela-ai-backend-systems",
     country: "Venezuela",
     code: "VEN_01",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=75",
     tag: {
       es: "#VENEZUELA #AI #BACKEND",
       en: "#VENEZUELA #AI #BACKEND",
@@ -412,7 +412,7 @@ export const regionalProjects = [
     slug: "usa-cloud-ai-products",
     country: "USA",
     code: "USA_01",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&q=75",
     tag: {
       es: "#USA #CLOUD #PRODUCT",
       en: "#USA #CLOUD #PRODUCT",
@@ -491,7 +491,7 @@ export const homeContent = {
         title: "Machine Learning y Deep Learning",
         description:
           "Desarrollo soluciones con modelos predictivos, entrenamiento de redes neuronales y automatización de flujos con datos reales.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&q=75",
       },
       {
         code: "VISION_AI",
@@ -499,7 +499,7 @@ export const homeContent = {
         title: "Vision Artificial y Reconocimiento Facial",
         description:
           "Construyo sistemas de analisis visual, reconocimiento facial y procesamiento de imagen para automatizar tareas y extraer informacion util.",
-        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=75",
       },
       {
         code: "WEB_MOBILE",
@@ -507,7 +507,7 @@ export const homeContent = {
         title: "Backend, Frontend y Apps Mobile",
         description:
           "Implemento APIs, webs, paneles y apps con Django, React, Next.js, React Native y Expo, listas para despliegue en cloud.",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&q=75",
       },
     ],
     marquee: [
@@ -598,7 +598,7 @@ export const homeContent = {
         title: "Machine Learning and Deep Learning",
         description:
           "I build predictive systems, neural-network pipelines, and automated data workflows aimed at real product and business use cases.",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&q=75",
       },
       {
         code: "VISION_AI",
@@ -606,7 +606,7 @@ export const homeContent = {
         title: "Computer Vision and Facial Recognition",
         description:
           "I create image-processing systems, facial-recognition workflows, and visual intelligence tools for automation and decision support.",
-        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=75",
       },
       {
         code: "WEB_MOBILE",
@@ -614,7 +614,7 @@ export const homeContent = {
         title: "Backend, Frontend, and Mobile Apps",
         description:
           "I ship APIs, websites, dashboards, and mobile apps with Django, React, Next.js, React Native, and Expo.",
-        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=700&q=75",
       },
     ],
     marquee: [

@@ -201,10 +201,10 @@ export function AboutPageContent() {
         </div>
 
         <div className="hero-actions">
-          <Link href="/" className="btn-secondary">
+          <Link href={`/${lang}`} className="btn-secondary">
             {t.backHome}
           </Link>
-          <Link href="/#contact" className="btn-retro">
+          <Link href={`/${lang}#contact`} className="btn-retro">
             {t.contact}
           </Link>
         </div>

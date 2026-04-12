@@ -50,8 +50,8 @@ export function HeroSection() {
           alt={heroImageAlt}
           className="hero-image"
           priority
-          width={3264}
-          height={2448}
+          width={750}
+          height={563}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>

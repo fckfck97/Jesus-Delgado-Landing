@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
 import { homeContent, profile } from "@/components/home/data"
 import { useSiteLanguage } from "@/components/providers/site-provider"
@@ -8,15 +8,15 @@ import { JesusDelgadoLogo } from "@/components/ui/logo"
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [statusText, setStatusText] = useState("SYS_UP: 00:00:00 | CPU: 12%")
+  const clockRef = useRef<HTMLSpanElement>(null)
   const { lang, setLang } = useSiteLanguage()
   const t = homeContent[lang]
   const aboutLabel = lang === "es" ? "SOBRE MI" : "ABOUT"
   const testimonialsLabel = lang === "es" ? "TESTIMONIOS" : "TESTIMONIALS"
+  const base = `/${lang}`
 
   useEffect(() => {
-    let frameId = 0
-    let lastSecond = ""
+    let timerId: ReturnType<typeof setInterval>
 
     const updateClock = () => {
       const now = new Date()
@@ -26,17 +26,14 @@ export function Navbar() {
         now.getMinutes().toString().padStart(2, "0") +
         ":" +
         now.getSeconds().toString().padStart(2, "0")
-
-      if (timeStr !== lastSecond) {
-        lastSecond = timeStr
-        setStatusText(`SYS_UP: ${timeStr} | CPU: 12%`)
+      if (clockRef.current) {
+        clockRef.current.textContent = `SYS_UP: ${timeStr} | CPU: 12%`
       }
-
-      frameId = window.requestAnimationFrame(updateClock)
     }
 
-    frameId = window.requestAnimationFrame(updateClock)
-    return () => window.cancelAnimationFrame(frameId)
+    updateClock()
+    timerId = setInterval(updateClock, 1000)
+    return () => clearInterval(timerId)
   }, [])
 
   const closeMenu = () => setMenuOpen(false)
@@ -44,7 +41,7 @@ export function Navbar() {
   return (
     <header>
       <div className="container header-row">
-        <Link href="/" className="logo" aria-label={profile.name}>
+        <Link href={base} className="logo" aria-label={profile.name}>
           <JesusDelgadoLogo size={40} showText />
         </Link>
         <button
@@ -60,22 +57,22 @@ export function Navbar() {
         </button>
         <div className={menuOpen ? "header-actions is-open" : "header-actions"}>
           <nav className="nav-links">
-            <Link href="/about" onClick={closeMenu}>
+            <Link href={`${base}/about`} onClick={closeMenu}>
               {aboutLabel}
             </Link>
-            <a href="/#work" onClick={closeMenu}>
+            <a href={`${base}#work`} onClick={closeMenu}>
               {t.nav.work}
             </a>
-            <a href="/#stack" onClick={closeMenu}>
+            <a href={`${base}#stack`} onClick={closeMenu}>
               {t.nav.stack}
             </a>
-            <a href="/#projects" onClick={closeMenu}>
+            <a href={`${base}#projects`} onClick={closeMenu}>
               {t.nav.projects}
             </a>
-            <a href="/#testimonials" onClick={closeMenu}>
+            <a href={`${base}#testimonials`} onClick={closeMenu}>
               {testimonialsLabel}
             </a>
-            <a href="/#contact" onClick={closeMenu}>
+            <a href={`${base}#contact`} onClick={closeMenu}>
               {t.nav.contact}
             </a>
           </nav>
@@ -101,7 +98,7 @@ export function Navbar() {
               EN
             </button>
           </div>
-          <div className="system-status">{statusText}</div>
+          <div className="system-status"><span ref={clockRef}>SYS_UP: 00:00:00 | CPU: 12%</span></div>
         </div>
       </div>
     </header>

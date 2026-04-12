@@ -1,7 +1,51 @@
 # Jesus Delgado
 
+> Python Developer and AI Engineer specializing in machine learning, deep learning,
+> computer vision, and production web systems.
+> Based in Colombia. Available for projects in Colombia, Venezuela, and the United States.
+
+Updated: 2026-04-12
+License: RSL-1.0
+
+## About
+Jesus Delgado (Ing. Jesus Delgado) is a systems engineer based in Colombia,
+specializing in backend development with Python and Django, web applications with Next.js,
+mobile applications with React Native and Expo, artificial intelligence systems with
+LangChain, and deployments on AWS and Docker. He has delivered projects in Colombia,
+Venezuela, and the United States.
+
+## Specialties
+- Machine Learning and Deep Learning with Python
+- Computer Vision and facial recognition systems
+- Backend APIs with Django and Django REST Framework
+- Web applications with Next.js and React
+- Mobile applications with React Native and Expo
+- AI-first development with LangChain
+- Cloud deployments on AWS, Docker, PostgreSQL
+
+## Active Stack
+Python, Django, Django REST, React, Next.js, React Native, Expo, LangChain,
+AWS, Docker, PostgreSQL, JWT
+
+## Projects
+- Colombia: https://devjesusdelgado.com/projects/colombia-digital-platforms
+- Venezuela: https://devjesusdelgado.com/projects/venezuela-ai-backend-systems
+- USA: https://devjesusdelgado.com/projects/usa-cloud-ai-products
+
+## Contact
+- LinkedIn: https://www.linkedin.com/in/gotzellll
+- GitHub: https://github.com/fckfck97
+- X: https://x.com/_GodZell
+- Email: hola@devjesusdelgado.com
+- Web: https://devjesusdelgado.com
+
+---
+
+# Jesus Delgado (Español)
+
 > Python Developer y AI Engineer especializado en machine learning, deep learning,
 > computer vision y sistemas web de producción.
+> Con base en Colombia. Disponible para proyectos en Colombia, Venezuela y Estados Unidos.
 
 ## Sobre mí
 Jesus Delgado (Ing. Jesus Delgado) es ingeniero de software con base en Colombia,
@@ -22,15 +66,3 @@ Venezuela y Estados Unidos.
 ## Stack Activo
 Python, Django, Django REST, React, Next.js, React Native, Expo, LangChain,
 AWS, Docker, PostgreSQL, JWT
-
-## Proyectos
-- Colombia: https://devjesusdelgado.com/projects/colombia-digital-platforms
-- Venezuela: https://devjesusdelgado.com/projects/venezuela-ai-backend-systems
-- USA: https://devjesusdelgado.com/projects/usa-cloud-ai-products
-
-## Contacto
-- LinkedIn: https://www.linkedin.com/in/gotzellll
-- GitHub: https://github.com/fckfck97
-- X: https://x.com/_GodZell
-- Email: themurder261@gmail.com
-- Web: https://devjesusdelgado.com

@@ -10,6 +10,7 @@ export function Footer() {
   const aboutLabel = lang === "es" ? "SOBRE MI" : "ABOUT"
   const privacyLabel = lang === "es" ? "PRIVACIDAD" : "PRIVACY"
   const testimonialsLabel = lang === "es" ? "TESTIMONIOS" : "TESTIMONIALS"
+  const base = `/${lang}`
 
   return (
     <footer className="container site-footer">
@@ -23,16 +24,16 @@ export function Footer() {
       </div>
       <div className="footer-right">
         <nav className="footer-nav">
-          <Link href="/about">{aboutLabel}</Link>
-          <Link href="/privacy">{privacyLabel}</Link>
-          <Link href="/#work">{t.nav.work}</Link>
-          <Link href="/#stack">{t.nav.stack}</Link>
-          <Link href="/#projects">{t.nav.projects}</Link>
-          <Link href="/#testimonials">{testimonialsLabel}</Link>
-          <Link href="/#contact">{t.nav.contact}</Link>
-          <Link href="/projects/colombia-digital-platforms">COLOMBIA</Link>
-          <Link href="/projects/venezuela-ai-backend-systems">VENEZUELA</Link>
-          <Link href="/projects/usa-cloud-ai-products">USA</Link>
+          <Link href={`${base}/about`}>{aboutLabel}</Link>
+          <Link href={`${base}/privacy`}>{privacyLabel}</Link>
+          <Link href={`${base}#work`}>{t.nav.work}</Link>
+          <Link href={`${base}#stack`}>{t.nav.stack}</Link>
+          <Link href={`${base}#projects`}>{t.nav.projects}</Link>
+          <Link href={`${base}#testimonials`}>{testimonialsLabel}</Link>
+          <Link href={`${base}#contact`}>{t.nav.contact}</Link>
+          <Link href={`${base}/projects/colombia-digital-platforms`}>COLOMBIA</Link>
+          <Link href={`${base}/projects/venezuela-ai-backend-systems`}>VENEZUELA</Link>
+          <Link href={`${base}/projects/usa-cloud-ai-products`}>USA</Link>
         </nav>
         <div className="footer-social">
           <a href={profile.whatsappUrl} target="_blank" rel="noreferrer">WHATSAPP</a>

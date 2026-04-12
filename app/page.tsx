@@ -1,11 +1,5 @@
-import { HomePage } from "@/components/home/home-page"
-import { HomePageSchemaScripts } from "@/components/seo/schema-scripts"
+import { redirect } from "next/navigation"
 
 export default function Page() {
-  return (
-    <>
-      <HomePageSchemaScripts />
-      <HomePage />
-    </>
-  )
+  redirect("/es")
 }

@@ -62,13 +62,13 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/">Home</Link>
+              <Link href={`/${lang}`}>Home</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="/#projects">{content.breadcrumbProjects}</Link>
+              <Link href={`/${lang}#projects`}>{content.breadcrumbProjects}</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
@@ -196,10 +196,10 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
         </div>
       ) : null}
       <div className="hero-actions">
-        <Link href="/#projects" className="btn-secondary">
+        <Link href={`/${lang}#projects`} className="btn-secondary">
           {content.backToProjects}
         </Link>
-        <a href="/#contact" className="btn-retro">
+        <a href={`/${lang}#contact`} className="btn-retro">
           {content.contact}
         </a>
       </div>

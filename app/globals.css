@@ -157,7 +157,6 @@
       linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06)) 0% 0% / 3px 100%;
     z-index: 9999;
     pointer-events: none;
-    will-change: transform;
   }
 }
 
@@ -228,6 +227,7 @@ header {
   font-size: 0.7rem;
   color: var(--accent-retro);
   white-space: nowrap;
+  min-width: 22ch;
 }
 
 .header-row {
