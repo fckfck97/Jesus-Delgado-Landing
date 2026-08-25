@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next"
 import { regionalProjects } from "@/components/home/data"
+import { courses } from "@/lib/courses"
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://devjesusdelgado.com"
 const LANGS = ["es", "en"] as const
@@ -8,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [
     { path: "", lastModified: "2026-04-12" },
     { path: "/about", lastModified: "2026-04-12" },
+    { path: "/courses", lastModified: "2026-08-25" },
   ]
 
   const projectPaths = regionalProjects.map((p) => ({
@@ -15,12 +17,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: "2026-03-28",
   }))
 
-  const allPaths = [...staticPaths, ...projectPaths]
+  const coursePaths = courses.map((course) => ({
+    path: `/courses/${course.slug}`,
+    lastModified: "2026-08-25",
+  }))
+
+  const allPaths = [...staticPaths, ...projectPaths, ...coursePaths]
 
   return LANGS.flatMap((lang) =>
     allPaths.map(({ path, lastModified }) => ({
       url: `${siteUrl}/${lang}${path}`,
       lastModified,
+      changeFrequency: path === "" ? "weekly" as const : "monthly" as const,
+      priority: path === "" ? 1 : path === "/about" || path === "/courses" ? 0.8 : 0.7,
+      alternates: {
+        languages: {
+          es: `${siteUrl}/es${path}`,
+          en: `${siteUrl}/en${path}`,
+          "x-default": `${siteUrl}/es${path}`,
+        },
+      },
     }))
   )
 }

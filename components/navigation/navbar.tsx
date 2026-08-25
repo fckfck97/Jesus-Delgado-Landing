@@ -13,11 +13,10 @@ export function Navbar() {
   const t = homeContent[lang]
   const aboutLabel = lang === "es" ? "SOBRE MI" : "ABOUT"
   const testimonialsLabel = lang === "es" ? "TESTIMONIOS" : "TESTIMONIALS"
+  const coursesLabel = lang === "es" ? "CURSOS" : "COURSES"
   const base = `/${lang}`
 
   useEffect(() => {
-    let timerId: ReturnType<typeof setInterval>
-
     const updateClock = () => {
       const now = new Date()
       const timeStr =
@@ -32,7 +31,7 @@ export function Navbar() {
     }
 
     updateClock()
-    timerId = setInterval(updateClock, 1000)
+    const timerId = setInterval(updateClock, 1000)
     return () => clearInterval(timerId)
   }, [])
 
@@ -69,6 +68,9 @@ export function Navbar() {
             <a href={`${base}#projects`} onClick={closeMenu}>
               {t.nav.projects}
             </a>
+            <Link href={`${base}/courses`} onClick={closeMenu}>
+              {coursesLabel}
+            </Link>
             <a href={`${base}#testimonials`} onClick={closeMenu}>
               {testimonialsLabel}
             </a>

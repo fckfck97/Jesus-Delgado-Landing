@@ -9,10 +9,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
   const isEs = lang === "es"
   return {
-    title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
+    title: isEs ? "Desarrollador Python e Ingeniero de IA" : "Python Developer & AI Engineer",
     description: isEs
-      ? "Portfolio enfocado en Python, machine learning, deep learning, computer vision, Django, Next.js, React Native, Expo, LangChain, AWS y despliegues en producción."
-      : "Portfolio focused on Python, machine learning, deep learning, computer vision, Django, Next.js, React Native, Expo, LangChain, AWS, and production deployments.",
+      ? "Portfolio enfocado en Python, machine learning, IA generativa, computer vision, OpenAI, LM Studio, Django, Next.js, React Native, LangChain, AWS y despliegues en producción."
+      : "Portfolio focused on Python, machine learning, generative AI, computer vision, OpenAI, LM Studio, Django, Next.js, React Native, LangChain, AWS, and production deployments.",
     alternates: getAlternates(lang),
     openGraph: {
       locale: isEs ? "es_CO" : "en_US",
@@ -21,10 +21,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function Page() {
+export default async function Page({ params }: Props) {
+  const { lang } = await params
   return (
     <>
-      <HomePageSchemaScripts />
+      <HomePageSchemaScripts lang={lang} />
       <HomePage />
     </>
   )

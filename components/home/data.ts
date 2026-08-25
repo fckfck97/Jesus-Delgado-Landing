@@ -21,6 +21,8 @@ export const technologies = [
   "Next.js",
   "Expo",
   "LangChain",
+  "OpenAI",
+  "LM Studio",
   "AWS",
   "Hostinger",
   "Docker",
@@ -146,28 +148,55 @@ const colombiaFeaturedProjects = [
     slug: "tablechat",
     name: "Tablechat",
     description: {
-      es: "Plataforma de ecommerce y comunicacion que combina catalogo, interaccion directa y flujos de venta conversacional dentro del producto.",
-      en: "Ecommerce and communication platform combining catalog, direct interaction, and conversational selling flows inside the product.",
+      es: "Aplicación móvil para pedir en restaurantes sin contacto: el cliente consulta el menú digital, arma su pedido con asistencia de IA y lo envía directamente desde la mesa.",
+      en: "Contactless restaurant-ordering app where guests browse a digital menu, build an AI-assisted order, and submit it directly from the table.",
     },
     features: {
       es: [
-        "Catalogo y paginas de producto",
-        "Mensajeria y atencion integrada",
-        "Gestion de pedidos",
-        "Panel admin y control de vendedores",
-        "Estructura lista para automatizacion",
+        "Menú digital para restaurantes",
+        "Pedidos desde la mesa sin esperar al mesero",
+        "Asistencia de IA durante la selección",
+        "Reducción de errores y tiempos de atención",
+        "Aplicación publicada para iOS y Android",
       ],
       en: [
-        "Catalog and product pages",
-        "Integrated messaging and support",
-        "Order management",
-        "Admin panel and seller controls",
-        "Automation-ready structure",
+        "Digital restaurant menu",
+        "Table-side ordering without waiting for a server",
+        "AI assistance during selection",
+        "Reduced ordering errors and service times",
+        "Published iOS and Android application",
       ],
     },
     url: "https://tablechat.yesglobals.com/",
     appStoreUrl: "https://apps.apple.com/co/app/tablechat/id6752120813",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.ovalcampus.tabletchat",
+  },
+  {
+    slug: "notaria-primera-barranquilla",
+    name: "Notaría Primera de Barranquilla",
+    description: {
+      es: "Ecosistema digital para atención notarial: sitio institucional completo y asistente virtual por WhatsApp que automatiza la orientación de trámites mediante n8n y Evolution API.",
+      en: "Digital service ecosystem for a public notary office: a complete institutional website plus a WhatsApp virtual assistant that automates procedural guidance through n8n and Evolution API.",
+    },
+    features: {
+      es: [
+        "Información de escrituración, registro civil, autenticaciones y trámites no escriturarios",
+        "Asistente virtual de atención conectado a WhatsApp",
+        "Automatización de conversaciones y procesos con n8n y Evolution API",
+        "Transparencia, PQRSD, normatividad y contenidos institucionales",
+        "58.000 visitas verificadas en los últimos tres meses mediante Google Business Profile",
+      ],
+      en: [
+        "Guidance for deeds, civil registry, authentications, and non-deed procedures",
+        "Customer-service virtual assistant connected to WhatsApp",
+        "Conversation and workflow automation with n8n and Evolution API",
+        "Transparency, citizen requests, regulations, and institutional content",
+        "58,000 verified visits over the last three months through Google Business Profile",
+      ],
+    },
+    url: "https://notariaprimerabarranquilla.com/",
+    appStoreUrl: "",
+    playStoreUrl: "",
   },
   {
     slug: "empaquetadora-del-norte",
@@ -306,6 +335,54 @@ const colombiaFeaturedProjects = [
   },
 ] as const
 
+const venezuelaFeaturedProjects = [
+  {
+    slug: "ciatran",
+    name: "CIATRAN Venezuela",
+    description: {
+      es: "Plataforma de movilidad multimodal sostenible para Venezuela y el Caribe que integra bicicletas eléctricas compartidas, logística de última milla, movilidad corporativa y datos urbanos.",
+      en: "Sustainable multimodal mobility platform for Venezuela and the Caribbean, integrating shared electric bicycles, last-mile logistics, corporate mobility, and urban data.",
+    },
+    features: {
+      es: ["Bicicletas compartidas eléctricas y solares", "Última milla con e-bikes de carga", "Movilidad corporativa bajo modelo MaaS", "Telemetría IoT y geofencing", "Analítica urbana e IA aplicada a movilidad"],
+      en: ["Electric and solar bike sharing", "Last-mile logistics with cargo e-bikes", "Corporate mobility under a MaaS model", "IoT telemetry and geofencing", "Urban analytics and AI applied to mobility"],
+    },
+    url: "https://ciatranve.com/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+  {
+    slug: "comuna-gran-cacique-mare",
+    name: "Monitor Central · Comuna Gran Cacique Mare",
+    description: {
+      es: "Sistema institucional para coordinar la recuperación de Mare Abajo, La Guaira, después de los sismos, con apoyo de la Fundación Misión Hábitat y el Ministerio del Poder Popular para Hábitat y Vivienda.",
+      en: "Institutional system coordinating post-earthquake recovery in Mare Abajo, La Guaira, with support from Fundación Misión Hábitat and the Ministry of People's Power for Habitat and Housing.",
+    },
+    features: {
+      es: ["Censo georreferenciado de viviendas", "Semáforos de riesgo", "Seguimiento técnico de viviendas afectadas", "Trazabilidad de inspecciones y acciones", "Acceso protegido para personal autorizado"],
+      en: ["Georeferenced housing census", "Risk traffic lights", "Technical tracking of affected homes", "Traceability of inspections and actions", "Protected access for authorized personnel"],
+    },
+    url: "https://comunagcm.obsin.tech/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+  {
+    slug: "sinri-industria",
+    name: "SINRI-INDUSTRIA · OBSIN",
+    description: {
+      es: "Sistema centralizado de reportes industriales para registrar mercancía, inventarios, hornos, productos y empresas vinculadas al Viceministerio de Industria para Hábitat y Vivienda.",
+      en: "Centralized industrial reporting system for merchandise, inventory, kilns, products, and companies under the Vice Ministry of Industry for Habitat and Housing.",
+    },
+    features: {
+      es: ["Registro de mercancía y movimientos", "Control de inventarios", "Registro y seguimiento de hornos", "Catálogo de productos industriales", "Gestión de empresas y reportes operativos"],
+      en: ["Merchandise and movement records", "Inventory control", "Kiln registration and monitoring", "Industrial product catalog", "Company management and operational reporting"],
+    },
+    url: "https://obsin.tech/login",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+] as const
+
 export const regionalProjects = [
   {
     slug: "colombia-digital-platforms",
@@ -313,48 +390,48 @@ export const regionalProjects = [
     code: "COL_01",
     image: "https://images.unsplash.com/photo-1523475472560-d2df97ec485c?w=700&q=75",
     tag: {
-      es: "#COLOMBIA #WEB #AUTOMATION",
-      en: "#COLOMBIA #WEB #AUTOMATION",
+      es: "#COLOMBIA #WEB #MOBILE #AUTOMATION",
+      en: "#COLOMBIA #WEB #MOBILE #AUTOMATION",
     },
     title: {
       es: "Proyectos en Colombia",
       en: "Projects in Colombia",
     },
     summary: {
-      es: "En Colombia trabajé en plataformas digitales para empresas que necesitaban ordenar procesos comerciales, mejorar su presencia online y reducir la fricción entre operación y ventas. El foco no fue solo construir interfaces atractivas, sino conectar formularios, catálogos, paneles internos y automatizaciones para que el equipo pudiera responder más rápido a clientes, medir resultados y lanzar cambios con menos dependencia operativa. Cada entrega estuvo pensada para soportar crecimiento, campañas comerciales y uso diario en producción.",
-      en: "In Colombia I worked on digital platforms for companies that needed to organize commercial operations, improve their online presence, and reduce friction between sales and execution. The goal was not only to ship polished interfaces, but to connect forms, catalogs, internal dashboards, and automations so teams could respond faster, measure results, and release updates with less operational overhead. Each delivery was designed to support growth, campaigns, and daily production usage.",
+      es: "En Colombia desarrollé productos digitales de naturaleza distinta: una plataforma de streaming, dos marketplaces, una aplicación de pedidos para restaurantes, un campus universitario, portales corporativos e institucionales y la digitalización de una notaría. Cada solución responde a una operación concreta y se presenta según sus funciones reales.",
+      en: "In Colombia I built distinct digital products: a streaming platform, two marketplaces, a restaurant-ordering app, a university campus, corporate and institutional portals, and the digital transformation of a notary office. Each solution supports a specific operation and is presented through its real functionality.",
     },
     overview: {
-      es: "Estos proyectos en Colombia se desarrollaron para negocios que necesitaban una base tecnológica más seria para vender, atender clientes y operar con mayor claridad. En varios casos el problema inicial era una mezcla de procesos manuales, herramientas desconectadas y sitios que no comunicaban bien la propuesta de valor. La solución pasó por rediseñar la capa web, ordenar la arquitectura de información y crear flujos que permitieran capturar datos, activar seguimientos y sostener una experiencia más confiable para usuarios y equipos internos.",
-      en: "These Colombia-focused projects were built for businesses that needed a more reliable technical foundation for sales, customer handling, and day-to-day operations. In several cases the initial problem was a combination of manual workflows, disconnected tools, and websites that did not communicate the offer clearly. The solution involved rebuilding the web layer, improving information architecture, and creating flows that could capture data, trigger follow-ups, and support a more dependable experience for both users and internal teams.",
+      es: "El portafolio combina productos transaccionales y experiencias de contenido. YuanCity permite explorar productos importados, comprar, pagar y gestionar entregas; GreenCloset funciona como marketplace social de moda circular con publicaciones, chat, geolocalización y pagos. Mikiguiki organiza películas, series, estrenos y fichas editoriales dentro de una experiencia de streaming para web, iOS y Android. TableChat lleva el menú y el pedido a la mesa con asistencia de IA. Allentown University concentra campus virtual, perfiles académicos, calificaciones, biblioteca y videoconferencias. Los demás proyectos presentan operaciones reales de sectores notarial, agroindustrial, gastronómico, social y cooperativo mediante sitios especializados, no tiendas en línea.",
+      en: "The portfolio combines transactional products with content-led experiences. YuanCity supports imported-product discovery, purchasing, payment, and delivery; GreenCloset is a circular-fashion social marketplace with listings, chat, geolocation, and payments. Mikiguiki organizes movies, series, releases, and editorial detail pages in a streaming experience for web, iOS, and Android. TableChat brings AI-assisted menu browsing and ordering to the restaurant table. Allentown University centralizes its virtual campus, academic profiles, grades, library, and videoconferencing. The remaining work presents real notarial, agroindustrial, hospitality, social-impact, and cooperative operations through specialized websites rather than online stores.",
     },
     approach: {
-      es: "La implementación combinó Next.js en frontend, Django y Python en backend, integraciones con servicios externos y despliegues cloud orientados a estabilidad. Se trabajó en landing pages, módulos administrativos, formularios conectados a automatizaciones y estructuras reutilizables para publicar nuevos contenidos o servicios sin rehacer el sistema. También se optimizaron tiempos de carga, estructura SEO básica, manejo de contenido y trazabilidad del funnel para que la tecnología tuviera impacto comercial y no solo visual.",
-      en: "The implementation combined Next.js on the frontend, Django and Python on the backend, external-service integrations, and cloud deployments focused on stability. Work covered landing pages, admin modules, forms connected to automations, and reusable structures to publish new services or content without rebuilding the system. Load times, baseline SEO structure, content handling, and funnel tracking were also improved so the technology delivered commercial impact instead of just a visual refresh.",
+      es: "La arquitectura se decidió según el producto. Las plataformas móviles y transaccionales combinaron React Native, Next.js, Django REST y PostgreSQL para separar catálogo, usuarios, contenido, pedidos y administración. Los portales corporativos priorizaron velocidad, claridad editorial, SEO y gestión de contenidos. En la Notaría Primera de Barranquilla, además de estructurar servicios, requisitos, transparencia y canales oficiales en la web, se automatizó la atención por WhatsApp con un asistente virtual orquestado en n8n y conectado mediante Evolution API.",
+      en: "Architecture was selected per product. Mobile and transactional platforms combined React Native, Next.js, Django REST, and PostgreSQL to separate catalog, users, content, orders, and administration. Corporate portals prioritized speed, editorial clarity, SEO, and content management. For Notaría Primera de Barranquilla, the website structures services, requirements, transparency, and official channels, while WhatsApp service was automated with a virtual assistant orchestrated in n8n and connected through Evolution API.",
     },
     outcomes: {
-      es: "El resultado fue una operación digital más ordenada, con sitios más rápidos, flujos de contacto mejor definidos y una base técnica lista para iterar. Los equipos pudieron publicar con más velocidad, capturar leads con menos pérdida de información y sostener campañas con menos trabajo manual. A nivel SEO y producto, estas plataformas quedaron mejor preparadas para indexación, expansión de contenido y crecimiento progresivo del canal digital.",
-      en: "The outcome was a more organized digital operation, with faster sites, clearer contact flows, and a technical base ready for iteration. Teams were able to publish faster, capture leads with less information loss, and sustain campaigns with less manual work. From an SEO and product standpoint, these platforms became more prepared for indexation, content expansion, and gradual digital-channel growth.",
+      es: "El resultado es un conjunto de productos publicados y utilizables en web, App Store y Google Play, con funciones específicas para consumir contenido, comprar y vender, pedir en restaurantes, estudiar, consultar servicios institucionales y automatizar atención ciudadana. En la Notaría Primera de Barranquilla, la combinación de web, SEO local, Google Business Profile y automatización de WhatsApp alcanzó 58.000 visitas verificadas durante los últimos tres meses.",
+      en: "The result is a set of live products available across the web, App Store, and Google Play, with specific functionality for streaming content, buying and selling, restaurant ordering, studying, accessing institutional services, and automating citizen support. At Notaría Primera de Barranquilla, the combination of website, local SEO, Google Business Profile, and WhatsApp automation reached 58,000 verified visits over the last three months.",
     },
     highlights: {
       es: [
-        "Arquitecturas web con Next.js y Django preparadas para crecimiento comercial.",
-        "Automatizaciones con Python para seguimiento de leads y tareas operativas repetitivas.",
-        "Integraciones con herramientas externas para centralizar formularios, datos y atención.",
-        "Despliegues cloud con foco en estabilidad, mantenimiento simple y tiempos de respuesta consistentes.",
-        "Estructuras reutilizables para lanzar nuevas páginas, servicios y campañas con mayor velocidad.",
+        "Dos marketplaces: comercio de productos importados en YuanCity y moda circular entre usuarios en GreenCloset.",
+        "Streaming de cine original con catálogo editorial, rankings, estrenos y aplicaciones móviles en Mikiguiki.",
+        "Pedidos de restaurante desde la mesa con menú digital y asistencia de IA en TableChat.",
+        "Campus universitario con gestión académica, biblioteca y videoconferencias en Allentown University.",
+        "Atención notarial automatizada con n8n, Evolution API y 58.000 visitas verificadas en tres meses.",
       ],
       en: [
-        "Web architectures with Next.js and Django prepared for commercial growth.",
-        "Python automations for lead follow-up and repetitive operational tasks.",
-        "External-tool integrations to centralize forms, data, and customer handling.",
-        "Cloud deployments focused on stability, simpler maintenance, and consistent response times.",
-        "Reusable structures to launch new pages, services, and campaigns faster.",
+        "Two marketplaces: imported-product commerce in YuanCity and user-to-user circular fashion in GreenCloset.",
+        "Original-film streaming with editorial catalog, rankings, releases, and mobile apps in Mikiguiki.",
+        "Table-side restaurant ordering with a digital menu and AI assistance in TableChat.",
+        "University campus with academic management, library, and videoconferencing in Allentown University.",
+        "Notarial service automation with n8n, Evolution API, and 58,000 verified visits in three months.",
       ],
     },
     stackDetail: {
-      es: "La base técnica de estos proyectos se construyó con una separación clara entre un frontend rápido e indexable y un backend estructurado capaz de manejar formularios, datos de usuarios y lógica de negocio de forma independiente. En el lado del frontend, Next.js con App Router fue elegido por su capacidad para entregar páginas renderizadas en servidor sin sacrificar interactividad. Esto fue relevante para clientes con objetivos SEO junto a sus necesidades operativas: el contenido necesitaba ser alcanzable por buscadores desde el primer día. Los componentes se organizaron por dominio en lugar de por tipo, manteniendo la lógica de negocio cerca de los elementos UI que la consumen. Se usó generación estática donde los datos eran predecibles y regeneración incremental para mantener páginas actualizadas sin rebuilds completos.\n\nEl backend Django se estructuró como API REST desde el inicio, incluso en proyectos de menor alcance. Esta decisión fue importante cuando los clientes necesitaron añadir una segunda capa de frontend, conectar una app mobile o exponer datos a una integración de terceros en medio del proyecto. Tener el contrato de API definido desde el principio significó que esas extensiones fueron adiciones independientes en lugar de reescrituras arquitectónicas. Django REST Framework gestionó serialización, permisos y validación de entradas con suficiente convención para evitar código repetitivo sin ocultar la lógica. PostgreSQL fue la base de datos principal: la estructura relacional fue crítica en proyectos que rastreaban leads, pedidos o usuarios en múltiples estados. Las migraciones de Django mantuvieron la evolución del esquema trazable y las restricciones a nivel de modelo previnieron problemas de calidad de datos antes de que llegaran a la API.\n\nPara despliegues, el enfoque combinó Vercel para el frontend Next.js y Hostinger o VPS para el backend Django. Esta separación permitió escalar de forma independiente, configurar dominios y simplificar la depuración. Scripts Python manejaron la capa de automatización: envíos de formularios activando secuencias de correo, exportaciones periódicas de datos y actualizaciones de estado fluyendo a través de colas de tareas basadas en Celery donde fue necesario. Esta capa redujo el trabajo manual para equipos de ventas y operaciones sin introducir dependencias SaaS adicionales. Los metadatos SEO se gestionaron a través de la API de Metadata de Next.js con datos estructurados en páginas clave, sitemap generado automáticamente y optimización de imágenes con next/image para controlar formato, tamaño y carga diferida sin infraestructura personalizada.",
-      en: "The technical foundation for these Colombia projects was built around a clear division between a fast, indexable frontend and a structured backend capable of managing form submissions, user data, and business logic independently. On the frontend side, Next.js with the App Router was chosen for its ability to deliver server-rendered pages without sacrificing interactivity. This was relevant for clients who had SEO goals alongside their operational needs — content needed to be reachable by search engines from day one, not dependent on client-side rendering. Components were organized by domain rather than by type, keeping business logic close to the UI elements that consumed it. Static generation was used where data was predictable, and incremental regeneration kept pages fresh without full rebuilds.\n\nThe Django backend was structured as a REST API from the start, even in smaller-scope projects. This decision mattered when clients needed to add a second frontend layer, connect a mobile app, or expose data to a third-party integration mid-project. Having the API contract defined early meant those extensions were plug-in additions rather than architectural rewrites. Django REST Framework handled serialization, permissions, and input validation with enough convention to avoid boilerplate without hiding the logic. PostgreSQL was the primary database. Relational structure proved important for projects that tracked leads, orders, or users across multiple states. Django migrations kept schema evolution traceable, and model-level constraints prevented data quality issues before they reached the API layer.\n\nFor deployments, the approach combined Vercel for the Next.js frontend and Hostinger or a VPS for the Django backend. This split allowed independent scaling, domain configuration, and simplified debugging. Python scripts handled the automation layer: form submissions triggering email sequences, periodic data exports, and status updates flowing through lightweight Celery-based task queues where needed. This layer reduced manual effort for sales and operations teams without introducing a new SaaS dependency. On the SEO side, metadata was managed through Next.js Metadata API with structured data on key pages, auto-generated sitemaps, and image optimization via next/image to control format, sizing, and lazy loading without custom infrastructure. The cumulative result was a platform maintainable by a non-technical team for content updates while remaining fully extensible by a developer.",
+      es: "No todos los proyectos usan la misma arquitectura. Mikiguiki, YuanCity, GreenCloset y TableChat requieren capas diferenciadas para web, aplicaciones móviles, autenticación, catálogos o contenido, estados de operación y publicación en tiendas. Next.js cubre las superficies web indexables; React Native entrega las experiencias móviles; Django REST y PostgreSQL sostienen la lógica de usuarios, contenido, pedidos y administración cuando el producto lo requiere. En Mikiguiki, la estructura editorial organiza películas, series, rankings y próximos estrenos. YuanCity y GreenCloset implementan modelos de marketplace distintos: comercio de productos importados y compraventa de moda circular entre usuarios. TableChat se concentra en menús digitales y pedidos sin contacto.\n\nLos sitios de Empaquetadora del Norte, REFINORTE, Café Arduvi, Fundación Arduvi y COOAGROVIDA tienen otro objetivo: presentar con precisión servicios, marcas, impacto social, sostenibilidad, proyectos productivos, menús o canales de contacto. En estos casos la prioridad técnica es una arquitectura de información clara, rendimiento, accesibilidad, SEO y contenido administrable. Allentown University añade una capa funcional académica con perfiles de estudiantes y docentes, calificaciones, biblioteca, campus virtual y videoconferencias.\n\nLa Notaría Primera de Barranquilla combina una web institucional orientada a servicio público con automatización operativa. El sitio ordena escrituración, registro civil, autenticaciones, trámites no escriturarios, transparencia, normatividad y PQRSD. La atención por WhatsApp se conecta mediante Evolution API y n8n, que orquesta el asistente virtual y los flujos de orientación. El trabajo también incluye SEO local y Google Business Profile; sus métricas registran 58.000 visitas verificadas durante los últimos tres meses.",
+      en: "These projects do not all share one architecture. Mikiguiki, YuanCity, GreenCloset, and TableChat require separate layers for indexable web experiences, mobile apps, authentication, catalogs or content, operational states, and app-store distribution. Next.js powers the web surfaces; React Native delivers mobile experiences; Django REST and PostgreSQL support users, content, orders, and administration where the product requires them. Mikiguiki structures films, series, rankings, and upcoming releases. YuanCity and GreenCloset implement different marketplace models: imported-product commerce and user-to-user circular fashion. TableChat focuses on digital menus and contactless ordering.\n\nEmpaquetadora del Norte, REFINORTE, Café Arduvi, Fundación Arduvi, and COOAGROVIDA serve a different purpose: accurately presenting services, brands, social impact, sustainability, productive projects, menus, and contact channels. Their technical priorities are clear information architecture, performance, accessibility, SEO, and manageable content. Allentown University adds an academic layer with student and faculty profiles, grades, a library, a virtual campus, and videoconferencing.\n\nNotaría Primera de Barranquilla combines a public-service institutional website with operational automation. The site organizes deeds, civil registry, authentications, non-deed procedures, transparency, regulations, and citizen requests. WhatsApp service is connected through Evolution API and n8n, which orchestrates the virtual assistant and guidance workflows. The work also covers local SEO and Google Business Profile, whose metrics record 58,000 verified visits over the last three months.",
     },
     featuredProjects: colombiaFeaturedProjects,
   },
@@ -363,50 +440,33 @@ export const regionalProjects = [
     country: "Venezuela",
     code: "VEN_01",
     image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&q=75",
-    tag: {
-      es: "#VENEZUELA #AI #BACKEND",
-      en: "#VENEZUELA #AI #BACKEND",
-    },
-    title: {
-      es: "Proyectos en Venezuela",
-      en: "Projects in Venezuela",
-    },
+    tag: { es: "#VENEZUELA #MOVILIDAD #RECONSTRUCCIÓN", en: "#VENEZUELA #MOBILITY #RECOVERY" },
+    title: { es: "Proyectos en Venezuela", en: "Projects in Venezuela" },
     summary: {
-      es: "En Venezuela los proyectos estuvieron más orientados a backend, automatización de procesos e inteligencia aplicada a operaciones internas. El contexto exigía soluciones confiables, con infraestructura ligera, buen control del dato y capacidad de integrarse con sistemas existentes sin introducir complejidad innecesaria. El trabajo se centró en construir servicios que resolvieran cuellos de botella reales: procesamiento de información, orquestación de tareas, exposición de APIs y herramientas internas que ayudaran a tomar decisiones con más velocidad.",
-      en: "In Venezuela the work was more focused on backend systems, process automation, and applied intelligence for internal operations. The context required reliable solutions, lightweight infrastructure, solid data handling, and the ability to integrate with existing systems without adding unnecessary complexity. The work centered on building services that solved real bottlenecks: information processing, task orchestration, API exposure, and internal tools that helped teams make decisions faster.",
+      es: "En Venezuela desarrollé tres plataformas vinculadas a necesidades concretas: CIATRAN para movilidad sostenible, el Monitor Central de la Comuna Gran Cacique Mare para la recuperación de viviendas afectadas en La Guaira y SINRI-INDUSTRIA para centralizar los reportes del Viceministerio de Industria para Hábitat y Vivienda.",
+      en: "In Venezuela I developed three platforms tied to concrete needs: CIATRAN for sustainable mobility, the Gran Cacique Mare Commune Central Monitor for housing recovery in La Guaira, and SINRI-INDUSTRIA for centralized reporting by the Vice Ministry of Industry for Habitat and Housing.",
     },
     overview: {
-      es: "Los casos desarrollados para este mercado partían de una necesidad clara: tener sistemas internos más robustos para soportar operación continua y mejorar la confiabilidad del producto digital. Había procesos manuales que consumían tiempo del equipo, validaciones repetitivas y flujos de datos que dependían demasiado de intervención humana. La prioridad fue convertir esas tareas en servicios backend bien definidos, con reglas explícitas, trazabilidad y componentes que pudieran mantenerse con bajo costo operativo.",
-      en: "The projects built for this market started from a clear need: stronger internal systems to support continuous operations and improve product reliability. There were manual processes consuming team time, repetitive validations, and data flows that depended too heavily on human intervention. The priority was to convert those tasks into well-defined backend services with explicit rules, traceability, and components that could be maintained with a low operational cost.",
+      es: "CIATRAN reúne movilidad eléctrica, última milla, servicios corporativos y analítica urbana. El Monitor Comunal registra viviendas de manera georreferenciada, clasifica niveles de riesgo y coordina la recuperación de Mare Abajo. SINRI-INDUSTRIA concentra mercancía, inventarios, hornos, productos, empresas y operaciones diarias dentro de un portal institucional protegido.",
+      en: "CIATRAN brings together electric mobility, last-mile logistics, corporate services, and urban analytics. The Commune Monitor georeferences homes, classifies risk levels, and coordinates recovery in Mare Abajo. SINRI-INDUSTRIA centralizes merchandise, inventory, kilns, products, companies, and daily operations in a protected institutional portal.",
     },
     approach: {
-      es: "La solución técnica se apoyó en Python, Django y APIs diseñadas para interoperar con otras capas del negocio. En paralelo se implementaron automatizaciones para clasificación de datos, procesamiento de entradas, generación de respuestas operativas y herramientas internas con componentes de AI donde aportaban valor real. El enfoque no fue agregar inteligencia artificial por moda, sino aplicarla en puntos concretos: reducción de tiempos, soporte a revisión humana y mejora de consistencia en tareas repetitivas.",
-      en: "The technical solution relied on Python, Django, and APIs designed to interoperate with other business layers. In parallel, automations were implemented for data classification, input processing, operational response generation, and internal tools with AI components where they created real value. The goal was not to add AI as a trend, but to apply it to concrete points: reducing cycle time, supporting human review, and improving consistency in repetitive tasks.",
+      es: "Cada plataforma organiza información operativa distinta. CIATRAN comunica servicios, telemetría e impacto ambiental; el Monitor Comunal usa censo georreferenciado y semáforos de riesgo; SINRI-INDUSTRIA estructura reportes industriales, inventarios y registros empresariales mediante acceso institucional con códigos de seguridad.",
+      en: "Each platform organizes a different type of operational information. CIATRAN covers services, telemetry, and environmental impact; the Commune Monitor uses a georeferenced census and risk traffic lights; SINRI-INDUSTRIA structures industrial reports, inventory, and company records through secure institutional access codes.",
     },
     outcomes: {
-      es: "Como resultado, los equipos ganaron sistemas más previsibles y una operación menos dependiente de trabajo manual. Las APIs y herramientas internas facilitaron integración, escalabilidad y control sobre el flujo de información. Además, la arquitectura quedó mejor posicionada para futuras extensiones, como nuevos módulos, más automatización y productos apoyados en AI que pudieran crecer sobre una base backend estable.",
-      en: "As a result, teams gained more predictable systems and an operation less dependent on manual work. The APIs and internal tools improved integration, scalability, and control over the information flow. The architecture also became better positioned for future extensions, such as new modules, deeper automation, and AI-supported products that could grow on top of a stable backend foundation.",
+      es: "El resultado son tres herramientas con propósito público y operativo: movilidad de cero emisiones, coordinación para la reconstrucción de La Guaira y control centralizado de información industrial. SINRI-INDUSTRIA permite consolidar datos que antes podían estar dispersos entre empresas, productos, inventarios y operaciones.",
+      en: "The result is three tools with public and operational purpose: zero-emission mobility, coordination for the recovery of La Guaira, and centralized industrial information control. SINRI-INDUSTRIA consolidates data across companies, products, inventory, and operations.",
     },
     highlights: {
-      es: [
-        "Servicios backend diseñados para soportar operación interna y productos digitales en producción.",
-        "APIs con reglas claras para integraciones, validaciones y exposición consistente de datos.",
-        "Automatización de procesamiento de información para reducir carga operativa del equipo.",
-        "Herramientas internas con componentes de AI aplicados a clasificación y apoyo de decisión.",
-        "Arquitectura preparada para crecer sin rehacer la base del sistema.",
-      ],
-      en: [
-        "Backend services designed to support internal operations and production digital products.",
-        "APIs with clear rules for integrations, validations, and consistent data exposure.",
-        "Information-processing automation to reduce operational load on the team.",
-        "Internal tools with AI components applied to classification and decision support.",
-        "Architecture prepared to grow without rebuilding the system foundation.",
-      ],
+      es: ["Movilidad eléctrica, última milla y analítica urbana.", "Censo georreferenciado y semáforos de riesgo.", "Trazabilidad para la recuperación de La Guaira.", "Control de mercancía, inventarios, hornos y productos.", "Gestión centralizada de empresas y reportes industriales."],
+      en: ["Electric mobility, last-mile logistics, and urban analytics.", "Georeferenced census and risk traffic lights.", "Traceability for the recovery of La Guaira.", "Merchandise, inventory, kiln, and product control.", "Centralized company and industrial report management."],
     },
     stackDetail: {
-      es: "Los proyectos backend para clientes venezolanos requirieron un conjunto distinto de prioridades: sistemas ligeros de desplegar y operar, confiables bajo condiciones variables y estructurados de modo que un equipo pequeño pudiera mantenerlos sin experiencia profunda en el framework. Python fue la base en todos los proyectos, una elección deliberada que permitió moverse rápidamente desde exploración de datos hasta servicio en producción sin cambiar de herramientas. Pandas y NumPy manejaron el preprocesamiento en desarrollo, y esa misma lógica se empaquetó en vistas Django o scripts independientes según lo que demandara el caso de uso. Cuando una tarea de clasificación era directa, un enfoque basado en reglas con Python estructurado fue más rápido y depurable que un modelo ML completo. Cuando los patrones en los datos no eran obvios, se entrenaron modelos con scikit-learn, se evaluaron y se serializaron con joblib para integración en la capa de API.\n\nEl ORM de Django se usó como capa de acceso a datos principal, con SQL directo reservado para consultas de reportes donde la complejidad de los joins hacía al ORM verboso. El esquema se mantuvo normalizado para datos transaccionales y desnormalizado para vistas de reportes con alta carga de lectura, gestionado a través de vistas a nivel de base de datos en lugar de duplicar modelos. El diseño de API siguió convenciones REST de forma consistente: rutas basadas en recursos, verbos HTTP alineados con la intención y formas de respuesta de error consistentes. Esto permitió que desarrolladores frontend y sistemas de terceros integraran sin negociación por endpoint. La autenticación JWT se añadió a los endpoints que manejaban datos específicos del usuario, con lógica de renovación de token gestionada a nivel de middleware.\n\nPara componentes AI, la estrategia fue aplicada y acotada. Las tareas se identificaron donde la revisión humana era el cuello de botella: clasificación de documentos, extracción de entidades, etiquetado de contenido. LangChain se usó en casos donde las llamadas a modelos de lenguaje necesitaban encadenarse con pasos de recuperación; en casos más simples, llamadas directas a la API de un LLM con un prompt bien estructurado fueron suficientes y más transparentes. Mantener los componentes AI como servicios aislados con contratos claros de entrada/salida los hizo testeables y reemplazables sin afectar el resto del sistema. Docker se usó para todos los despliegues, garantizando paridad de entorno entre desarrollo y producción y simplificando la entrega cuando el equipo de infraestructura del cliente necesitaba gestionar el sistema.",
-      en: "The backend projects built for Venezuelan clients required a different set of priorities: systems that were lightweight to deploy and operate, reliable under variable conditions, and structured so a small team could maintain them without deep framework expertise. Python was the foundation across every project — a deliberate choice that allowed moving quickly from data exploration to production service without switching tools. Pandas and NumPy handled preprocessing during development, and that same logic was packaged into Django views or standalone scripts depending on what the use case demanded. When a classification task was straightforward, a rule-based approach with structured Python was faster and more debuggable than a full ML model. When patterns in the data were non-obvious, scikit-learn models were trained, evaluated, and serialized with joblib for integration into the API layer.\n\nDjango's ORM was used as the primary data access layer, with raw SQL reserved for reporting queries where join complexity made the ORM verbose. The schema was kept normalized for transactional data and denormalized for read-heavy reporting views, handled through database-level views rather than duplicating models. API design followed REST conventions consistently: resource-based routes, HTTP verbs aligned with intent, and consistent error response shapes. This allowed frontend developers and third-party systems to integrate without per-endpoint negotiation. JWT authentication was added to endpoints handling user-specific data, with token refresh logic managed at the middleware level.\n\nFor AI components, the strategy was applied and bounded — not exploratory. Tasks were identified where human review was the bottleneck: document classification, entity extraction, content tagging. LangChain was used in cases where language model calls needed chaining with retrieval steps; in simpler cases, direct API calls to an LLM with a well-structured prompt were sufficient and more transparent. Keeping AI components as isolated services with clear input/output contracts made them testable and replaceable without affecting the rest of the system. Docker was used for all deployments to ensure environment parity between development and production and to simplify handoff when the client's infrastructure team needed to manage the system. Structured log lines to standard output made it possible to query patterns without parsing unstructured text, keeping observability lightweight and dependency-free.",
+      es: "CIATRAN organiza una plataforma de movilidad como servicio con transporte compartido, logística de carga, servicios corporativos y datos. La propuesta tecnológica contempla estaciones solares, seguimiento GPS, geofencing, telemetría IoT, paneles de control y modelos de IA para convertir el movimiento de la flota en información útil.\n\nEl Monitor Central de la Comuna Gran Cacique Mare está diseñado para la recuperación posterior a los sismos en Mare Abajo, parroquia Carlos Soublette. El acceso se limita a personal autorizado y la información se estructura mediante censo georreferenciado, evaluación técnica, semáforos de riesgo y seguimiento de acciones sobre cada vivienda.\n\nLa plataforma acompaña la reconstrucción de La Guaira con apoyo de la Fundación Misión Hábitat y del Ministerio del Poder Popular para Hábitat y Vivienda, priorizando protección de datos, acceso institucional y uso por equipos de campo.",
+      en: "CIATRAN structures mobility as a service across shared transportation, cargo logistics, corporate services, and data. Its technology proposal includes solar stations, GPS tracking, geofencing, IoT telemetry, control dashboards, and AI models that turn fleet movement into useful information.\n\nThe Gran Cacique Mare Commune Central Monitor is designed for post-earthquake recovery in Mare Abajo, Carlos Soublette parish. Access is restricted to authorized staff, and information is organized through a georeferenced census, technical evaluations, risk traffic lights, and action tracking for each home.\n\nThe platform supports reconstruction in La Guaira with Fundación Misión Hábitat and the Ministry of People's Power for Habitat and Housing, prioritizing data protection, institutional access, and field-team use.",
     },
+    featuredProjects: venezuelaFeaturedProjects,
   },
   {
     slug: "usa-cloud-ai-products",
@@ -472,9 +532,9 @@ export const homeContent = {
     heroTitleTop: "Developer",
     heroTitleAccent: "Python",
     heroDescription:
-      "Construyo productos de software y automatizaciones con foco en aprendizaje automático, aprendizaje profundo, visión artificial, apps AI-first y desarrollo web moderno.",
+      "Construyo productos de software y automatizaciones con foco en machine learning, IA generativa, visión artificial, apps AI-first y desarrollo web moderno.",
     heroSecondary:
-      "Trabajo con Python, Django, React, Next.js, React Native, Expo, LangChain, AWS y despliegues listos para producción.",
+      "Trabajo con Python, Django, React, Next.js, React Native, Expo, OpenAI, LM Studio, LangChain, AWS y despliegues listos para producción.",
     primaryCta: "VER ESPECIALIDADES",
     secondaryCta: "CONTACTAR",
     stats: [
@@ -487,10 +547,10 @@ export const homeContent = {
     workCards: [
       {
         code: "ML_CORE",
-        tag: "#PYTHON #ML #DL",
-        title: "Machine Learning y Deep Learning",
+        tag: "#PYTHON #ML #OPENAI",
+        title: "Machine Learning e IA Generativa",
         description:
-          "Desarrollo soluciones con modelos predictivos, entrenamiento de redes neuronales y automatización de flujos con datos reales.",
+          "Desarrollo soluciones con modelos predictivos, OpenAI, modelos locales en LM Studio y automatización de flujos con datos reales.",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&q=75",
       },
       {
@@ -514,17 +574,17 @@ export const homeContent = {
       "DISPONIBLE PARA NUEVOS PROYECTOS",
       "AUTOMATIZACION CON PYTHON",
       "APPS CON REACT NATIVE Y EXPO",
-      "IA CON LANGCHAIN",
+      "IA CON OPENAI, LM STUDIO Y LANGCHAIN",
       "DEPLOYS EN AWS Y HOSTINGER",
     ],
     stackTitle: "STACK_ACTIVO.EXE",
     terminalRows: [
-      "Especialidades: Machine Learning, Deep Learning, Vision Artificial, Redes Neuronales",
+      "IA: Machine Learning, IA Generativa, Visión Artificial, OpenAI, LM Studio, LangChain",
       "Backend: Python, Django, Django REST, JWT, PostgreSQL, SQLite",
       "Frontend: React, Next.js, JavaScript, HTML5, CSS3, Redux",
-      "Mobile y AI Apps: React Native, Expo, LangChain",
+      "Mobile: React Native, Expo",
       "Infraestructura: Docker, Linux, AWS, Hostinger, Postman",
-      "Dato curioso: me encanta automatizar tareas con programacion",
+      "Dato curioso: me encanta automatizar tareas con programación",
     ],
     projectsTitle: "Proyectos Por Pais",
     projectsIntro:
@@ -541,7 +601,7 @@ export const homeContent = {
         name: "Director de Operaciones",
         role: "Servicios digitales",
         country: "Colombia",
-        result: "Resultado: mejor seguimiento de leads, menos retrabajo interno y una operación web más estable.",
+        result: "Resultado: procesos digitales más claros, menos retrabajo interno y una operación web más estable.",
       },
       {
         tag: "#TESTIMONIO #VENEZUELA",
@@ -579,9 +639,9 @@ export const homeContent = {
     heroTitleTop: "Python",
     heroTitleAccent: "Developer",
     heroDescription:
-      "I build software products and automations focused on machine learning, deep learning, computer vision, AI-first apps, and modern web development.",
+      "I build software products and automations focused on machine learning, generative AI, computer vision, AI-first apps, and modern web development.",
     heroSecondary:
-      "My stack includes Python, Django, React, Next.js, React Native, Expo, LangChain, AWS, and production-ready deployments.",
+      "My stack includes Python, Django, React, Next.js, React Native, Expo, OpenAI, LM Studio, LangChain, AWS, and production-ready deployments.",
     primaryCta: "VIEW SPECIALTIES",
     secondaryCta: "CONTACT",
     stats: [
@@ -594,10 +654,10 @@ export const homeContent = {
     workCards: [
       {
         code: "ML_CORE",
-        tag: "#PYTHON #ML #DL",
-        title: "Machine Learning and Deep Learning",
+        tag: "#PYTHON #ML #OPENAI",
+        title: "Machine Learning and Generative AI",
         description:
-          "I build predictive systems, neural-network pipelines, and automated data workflows aimed at real product and business use cases.",
+          "I build predictive systems, OpenAI integrations, local-model workflows with LM Studio, and data automations for real product and business use cases.",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&q=75",
       },
       {
@@ -621,15 +681,15 @@ export const homeContent = {
       "AVAILABLE FOR NEW PROJECTS",
       "PYTHON AUTOMATION",
       "REACT NATIVE AND EXPO APPS",
-      "AI APPS WITH LANGCHAIN",
+      "AI WITH OPENAI, LM STUDIO, AND LANGCHAIN",
       "DEPLOYMENTS ON AWS AND HOSTINGER",
     ],
     stackTitle: "ACTIVE_STACK.EXE",
     terminalRows: [
-      "Specialties: Machine Learning, Deep Learning, Computer Vision, Neural Networks",
+      "AI: Machine Learning, Generative AI, Computer Vision, OpenAI, LM Studio, LangChain",
       "Backend: Python, Django, Django REST, JWT, PostgreSQL, SQLite",
       "Frontend: React, Next.js, JavaScript, HTML5, CSS3, Redux",
-      "Mobile and AI Apps: React Native, Expo, LangChain",
+      "Mobile: React Native, Expo",
       "Infrastructure: Docker, Linux, AWS, Hostinger, Postman",
       "Fun fact: I love automating tasks with code",
     ],
@@ -648,7 +708,7 @@ export const homeContent = {
         name: "Operations Director",
         role: "Digital services",
         country: "Colombia",
-        result: "Result: better lead tracking, less internal rework, and a more stable web operation.",
+        result: "Result: clearer digital processes, less internal rework, and a more stable web operation.",
       },
       {
         tag: "#TESTIMONIAL #VENEZUELA",

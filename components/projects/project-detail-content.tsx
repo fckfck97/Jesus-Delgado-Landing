@@ -4,14 +4,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { regionalProjects } from "@/components/home/data"
 import { useSiteLanguage } from "@/components/providers/site-provider"
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
 
 type Project = (typeof regionalProjects)[number]
 
@@ -21,7 +13,7 @@ type ProjectDetailContentProps = {
 
 export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
   const { lang } = useSiteLanguage()
-  const featuredProjects = project.featuredProjects ?? []
+  const featuredProjects = "featuredProjects" in project ? project.featuredProjects : []
 
   const content = {
     title: project.title[lang],
@@ -58,25 +50,15 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
 
   return (
     <section className="project-detail">
-      <Breadcrumb className="mb-6">
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link href={`/${lang}`}>Home</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link href={`/${lang}#projects`}>{content.breadcrumbProjects}</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>{content.title}</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      <nav aria-label="breadcrumb" className="mb-6">
+        <ol className="flex flex-wrap items-center gap-2 text-sm">
+          <li><Link href={`/${lang}`}>Home</Link></li>
+          <li aria-hidden="true">/</li>
+          <li><Link href={`/${lang}#projects`}>{content.breadcrumbProjects}</Link></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page">{content.title}</li>
+        </ol>
+      </nav>
       <p className="project-detail-eyebrow">{project.code}</p>
       <h1 className="project-detail-title">{content.title}</h1>
       <p className="project-detail-copy">{content.overview}</p>
@@ -156,7 +138,7 @@ export function ProjectDetailContent({ project }: ProjectDetailContentProps) {
           <p className="project-detail-copy">{content.featuredProjectsIntro}</p>
           <div className="portfolio-grid project-featured-grid">
             {featuredProjects.map((item) => {
-              const hasLinks = Boolean(item.url || item.appStoreUrl || item.playStoreUrl)
+              const hasLinks = Boolean(item.url)
 
               return (
                 <div className="project-card" key={item.slug}>

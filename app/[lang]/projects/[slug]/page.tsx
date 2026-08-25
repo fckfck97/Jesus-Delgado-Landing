@@ -20,12 +20,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const path = `/projects/${slug}`
 
   return {
-    title: isEs ? `${project.title.es} | Ing. Jesus Delgado` : `${project.title.en} | Ing. Jesus Delgado`,
+    title: isEs ? project.title.es : project.title.en,
     description: isEs ? project.summary.es : project.summary.en,
     alternates: getAlternates(lang, path),
     openGraph: {
       locale: isEs ? "es_CO" : "en_US",
       url: `/${lang}${path}`,
+      type: "article",
+      title: isEs ? project.title.es : project.title.en,
+      description: isEs ? project.summary.es : project.summary.en,
+      images: [{ url: project.image, alt: isEs ? project.title.es : project.title.en }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: isEs ? project.title.es : project.title.en,
+      description: isEs ? project.summary.es : project.summary.en,
+      images: [project.image],
     },
   }
 }
@@ -42,6 +52,8 @@ export default async function ProjectDetailPage({ params }: Props) {
       <ProjectSchemaScripts
         code={project.code}
         country={project.country}
+        image={project.image}
+        lang={lang}
         slug={project.slug}
         title={isEs ? project.title.es : project.title.en}
         summary={isEs ? project.summary.es : project.summary.en}

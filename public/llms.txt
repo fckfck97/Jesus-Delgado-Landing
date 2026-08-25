@@ -1,6 +1,6 @@
 # Jesus Delgado
 
-> Python Developer and AI Engineer specializing in machine learning, deep learning,
+> Python Developer and AI Engineer specializing in machine learning, generative AI,
 > computer vision, and production web systems.
 > Based in Colombia. Available for projects in Colombia, Venezuela, and the United States.
 
@@ -11,20 +11,20 @@ License: RSL-1.0
 Jesus Delgado (Ing. Jesus Delgado) is a systems engineer based in Colombia,
 specializing in backend development with Python and Django, web applications with Next.js,
 mobile applications with React Native and Expo, artificial intelligence systems with
-LangChain, and deployments on AWS and Docker. He has delivered projects in Colombia,
+OpenAI, LM Studio, LangChain, and deployments on AWS and Docker. He has delivered projects in Colombia,
 Venezuela, and the United States.
 
 ## Specialties
-- Machine Learning and Deep Learning with Python
+- Machine Learning and Generative AI with Python
 - Computer Vision and facial recognition systems
 - Backend APIs with Django and Django REST Framework
 - Web applications with Next.js and React
 - Mobile applications with React Native and Expo
-- AI-first development with LangChain
+- AI-first development with OpenAI, LM Studio, and LangChain
 - Cloud deployments on AWS, Docker, PostgreSQL
 
 ## Active Stack
-Python, Django, Django REST, React, Next.js, React Native, Expo, LangChain,
+Python, Django, Django REST, React, Next.js, React Native, Expo, OpenAI, LM Studio, LangChain,
 AWS, Docker, PostgreSQL, JWT
 
 ## Projects
@@ -43,7 +43,7 @@ AWS, Docker, PostgreSQL, JWT
 
 # Jesus Delgado (Español)
 
-> Python Developer y AI Engineer especializado en machine learning, deep learning,
+> Python Developer y AI Engineer especializado en machine learning, IA generativa,
 > computer vision y sistemas web de producción.
 > Con base en Colombia. Disponible para proyectos en Colombia, Venezuela y Estados Unidos.
 
@@ -51,18 +51,18 @@ AWS, Docker, PostgreSQL, JWT
 Jesus Delgado (Ing. Jesus Delgado) es ingeniero de software con base en Colombia,
 especializado en desarrollo backend con Python y Django, aplicaciones web con Next.js,
 aplicaciones móviles con React Native y Expo, sistemas de inteligencia artificial con
-LangChain, y despliegues en AWS y Docker. Ha desarrollado proyectos en Colombia,
+OpenAI, LM Studio, LangChain y despliegues en AWS y Docker. Ha desarrollado proyectos en Colombia,
 Venezuela y Estados Unidos.
 
 ## Especialidades
-- Machine Learning y Deep Learning con Python
+- Machine Learning e IA Generativa con Python
 - Computer Vision y reconocimiento facial
 - APIs backend con Django y Django REST Framework
 - Aplicaciones web con Next.js y React
 - Aplicaciones móviles con React Native y Expo
-- Desarrollo AI-first con LangChain
+- Desarrollo AI-first con OpenAI, LM Studio y LangChain
 - Despliegues en AWS, Docker, PostgreSQL
 
 ## Stack Activo
-Python, Django, Django REST, React, Next.js, React Native, Expo, LangChain,
+Python, Django, Django REST, React, Next.js, React Native, Expo, OpenAI, LM Studio, LangChain,
 AWS, Docker, PostgreSQL, JWT

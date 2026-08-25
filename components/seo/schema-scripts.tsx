@@ -1,5 +1,11 @@
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://devjesusdelgado.com"
 
+type SupportedLang = "es" | "en" | string
+
+function languageName(lang: SupportedLang) {
+  return lang === "es" ? "es-CO" : "en-US"
+}
+
 type JsonLdProps = {
   data: Record<string, unknown>
 }
@@ -39,12 +45,14 @@ export function RootSchemaScripts() {
     knowsAbout: [
       "Python",
       "Machine Learning",
-      "Deep Learning",
+      "Generative AI",
       "Computer Vision",
       "Django",
       "Next.js",
       "React Native",
       "LangChain",
+      "OpenAI",
+      "LM Studio",
       "AWS",
     ],
     contactPoint: {
@@ -94,21 +102,24 @@ export function RootSchemaScripts() {
   )
 }
 
-export function HomePageSchemaScripts() {
+export function HomePageSchemaScripts({ lang }: { lang: SupportedLang }) {
+  const pageUrl = `${SITE_URL}/${lang}`
+  const isEs = lang === "es"
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": `${SITE_URL}/#webpage`,
-    url: SITE_URL,
-    name: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
-    description:
-      "Portfolio of Ing. Jesus Delgado — Python developer and AI engineer building machine learning systems, computer vision pipelines, and full-stack products for Colombia, Venezuela, and the United States.",
+    "@id": `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: isEs ? "Ing. Jesus Delgado | Desarrollador Python e Ingeniero de IA" : "Ing. Jesus Delgado | Python Developer & AI Engineer",
+    description: isEs
+      ? "Portafolio de Jesus Delgado: desarrollo Python, inteligencia artificial, automatización, visión artificial y aplicaciones web y mobile para Colombia, Venezuela y Estados Unidos."
+      : "Jesus Delgado's portfolio: Python development, artificial intelligence, automation, computer vision, and web and mobile applications for Colombia, Venezuela, and the United States.",
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#person` },
     author: { "@id": `${SITE_URL}/#person` },
-    inLanguage: ["es", "en"],
+    inLanguage: languageName(lang),
     datePublished: "2026-03-28",
-    dateModified: "2026-04-12",
+    dateModified: "2026-08-25",
   }
 
   const serviceItemListSchema = {
@@ -125,7 +136,7 @@ export function HomePageSchemaScripts() {
           "@id": `${SITE_URL}/#service-ml`,
           name: "Machine Learning Solutions",
           description:
-            "Predictive models, neural-network pipelines, and automated data workflows built with Python, scikit-learn, and deep learning frameworks for real product use cases.",
+            "Predictive models, OpenAI integrations, local-model workflows with LM Studio, and automated data pipelines built with Python for real product use cases.",
           serviceType: "Machine Learning",
           provider: { "@id": `${SITE_URL}/#person` },
           areaServed: [
@@ -242,24 +253,26 @@ export function HomePageSchemaScripts() {
   )
 }
 
-export function AboutPageSchemaScripts() {
-  const aboutUrl = `${SITE_URL}/about`
+export function AboutPageSchemaScripts({ lang }: { lang: SupportedLang }) {
+  const aboutUrl = `${SITE_URL}/${lang}/about`
+  const isEs = lang === "es"
 
   const profilePageSchema = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     "@id": `${aboutUrl}#webpage`,
     url: aboutUrl,
-    name: "About Ing. Jesus Delgado — Python Developer & AI Engineer",
-    description:
-      "Systems engineer graduated from UNEFA, based in Colombia. Specializes in Python, Django, machine learning, computer vision, and full-stack production software for clients in Colombia, Venezuela, and the United States.",
+    name: isEs ? "Sobre el Ing. Jesus Delgado — Desarrollador Python e Ingeniero de IA" : "About Ing. Jesus Delgado — Python Developer & AI Engineer",
+    description: isEs
+      ? "Ingeniero de sistemas graduado de UNEFA y radicado en Colombia, especializado en Python, Django, inteligencia artificial, visión artificial y software en producción."
+      : "Systems engineer graduated from UNEFA and based in Colombia, specializing in Python, Django, artificial intelligence, computer vision, and production software.",
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#person` },
     author: { "@id": `${SITE_URL}/#person` },
     mainEntity: { "@id": `${SITE_URL}/#person` },
-    inLanguage: ["es", "en"],
+    inLanguage: languageName(lang),
     datePublished: "2026-03-28",
-    dateModified: "2026-04-12",
+    dateModified: "2026-08-25",
     breadcrumb: {
       "@type": "BreadcrumbList",
       "@id": `${aboutUrl}#breadcrumb`,
@@ -268,7 +281,7 @@ export function AboutPageSchemaScripts() {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: SITE_URL,
+          item: `${SITE_URL}/${lang}`,
         },
         {
           "@type": "ListItem",
@@ -286,6 +299,8 @@ export function AboutPageSchemaScripts() {
 type ProjectSchemaScriptsProps = {
   code: string
   country: string
+  image: string
+  lang: SupportedLang
   slug: string
   title: string
   summary: string
@@ -294,11 +309,13 @@ type ProjectSchemaScriptsProps = {
 export function ProjectSchemaScripts({
   code,
   country,
+  image,
+  lang,
   slug,
   title,
   summary,
 }: ProjectSchemaScriptsProps) {
-  const projectUrl = `${SITE_URL}/projects/${slug}`
+  const projectUrl = `${SITE_URL}/${lang}/projects/${slug}`
 
   const webPageSchema = {
     "@context": "https://schema.org",
@@ -307,14 +324,15 @@ export function ProjectSchemaScripts({
     url: projectUrl,
     name: title,
     description: summary,
+    image,
     isPartOf: { "@id": `${SITE_URL}/#website` },
     about: { "@id": `${SITE_URL}/#person` },
     author: { "@id": `${SITE_URL}/#person` },
     breadcrumb: { "@id": `${projectUrl}#breadcrumb` },
-    inLanguage: ["es", "en"],
+    inLanguage: languageName(lang),
     keywords: [country, code, "AI", "Python", "Full-Stack"],
     datePublished: "2026-03-28",
-    dateModified: "2026-03-28",
+    dateModified: "2026-08-25",
   }
 
   const breadcrumbSchema = {
@@ -326,7 +344,7 @@ export function ProjectSchemaScripts({
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: SITE_URL,
+        item: `${SITE_URL}/${lang}`,
       },
       {
         "@type": "ListItem",
@@ -340,6 +358,93 @@ export function ProjectSchemaScripts({
   return (
     <>
       <JsonLd data={webPageSchema} />
+      <JsonLd data={breadcrumbSchema} />
+    </>
+  )
+}
+
+type CourseItem = {
+  slug: string
+  title: string
+  provider: string
+  pdf?: string
+  accomplishment?: {
+    completedBy: string
+    completionDate: string
+    topics: readonly string[]
+    sourceUrl: string
+  }
+}
+
+export function CoursesPageSchemaScripts({
+  lang,
+  courses,
+}: {
+  lang: SupportedLang
+  courses: readonly CourseItem[]
+}) {
+  const pageUrl = `${SITE_URL}/${lang}/courses`
+  const isEs = lang === "es"
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${pageUrl}#webpage`,
+    url: pageUrl,
+    name: isEs ? "Cursos y certificaciones de Jesus Delgado" : "Jesus Delgado's courses and certifications",
+    description: isEs
+      ? `Colección de ${courses.length} certificados profesionales en desarrollo de software, infraestructura e inteligencia artificial.`
+      : `Collection of ${courses.length} professional certificates in software development, infrastructure, and artificial intelligence.`,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${SITE_URL}/#person` },
+    inLanguage: languageName(lang),
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: courses.length,
+      itemListElement: courses.map((course, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${SITE_URL}/${lang}/courses/${course.slug}`,
+        name: `${course.title} — ${course.provider}`,
+      })),
+    },
+    dateModified: "2026-08-25",
+  }
+
+  return <JsonLd data={collectionSchema} />
+}
+
+export function CourseSchemaScripts({ lang, course }: { lang: SupportedLang; course: CourseItem }) {
+  const pageUrl = `${SITE_URL}/${lang}/courses/${course.slug}`
+  const isEs = lang === "es"
+  const credentialSchema = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOccupationalCredential",
+    "@id": `${pageUrl}#credential`,
+    url: pageUrl,
+    name: course.title,
+    description: isEs
+      ? `Certificado de ${course.title} emitido por ${course.provider} y obtenido por Jesus Delgado.`
+      : `${course.title} certificate issued by ${course.provider} and earned by Jesus Delgado.`,
+    credentialCategory: "Certificate",
+    recognizedBy: { "@type": "Organization", name: course.provider },
+    about: { "@id": `${SITE_URL}/#person` },
+    sameAs: course.accomplishment?.sourceUrl,
+    inLanguage: languageName(lang),
+  }
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: isEs ? "Inicio" : "Home", item: `${SITE_URL}/${lang}` },
+      { "@type": "ListItem", position: 2, name: isEs ? "Cursos" : "Courses", item: `${SITE_URL}/${lang}/courses` },
+      { "@type": "ListItem", position: 3, name: course.title, item: pageUrl },
+    ],
+  }
+
+  return (
+    <>
+      <JsonLd data={credentialSchema} />
       <JsonLd data={breadcrumbSchema} />
     </>
   )

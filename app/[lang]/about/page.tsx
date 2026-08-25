@@ -9,7 +9,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
   const isEs = lang === "es"
   return {
-    title: isEs ? "Sobre Mí | Ing. Jesus Delgado" : "About | Ing. Jesus Delgado",
+    title: isEs ? "Sobre mí — Desarrollador Python e Ingeniero de IA" : "About — Python Developer & AI Engineer",
     description: isEs
       ? "Ingeniero de software con base en Colombia especializado en Python, AI engineering, computer vision, sistemas backend y plataformas web en producción."
       : "Software engineer based in Colombia focused on Python, AI engineering, computer vision, backend systems, and production web platforms.",
@@ -21,10 +21,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function AboutPage() {
+export default async function AboutPage({ params }: Props) {
+  const { lang } = await params
   return (
     <>
-      <AboutPageSchemaScripts />
+      <AboutPageSchemaScripts lang={lang} />
       <AboutPageContent />
     </>
   )

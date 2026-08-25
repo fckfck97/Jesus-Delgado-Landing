@@ -7,7 +7,7 @@ type Props = { params: Promise<{ lang: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params
   return {
-    title: "Privacy Policy / Política de Privacidad",
+    title: lang === "es" ? "Política de privacidad" : "Privacy Policy",
     description:
       "Privacy Policy / Política de Privacidad for devjesusdelgado.com covering analytics, contact data, and how project inquiries are handled.",
     alternates: getAlternates(lang, "/privacy"),

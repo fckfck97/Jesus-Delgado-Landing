@@ -19,28 +19,52 @@ const _syne = Syne({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://devjesusdelgado.com"),
-  title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
+  title: {
+    default: "Ing. Jesus Delgado | Python Developer & AI Engineer",
+    template: "%s | Jesus Delgado",
+  },
   description:
     "Portfolio of Ing. Jesus Delgado — Python developer and AI engineer building production-grade backend systems, computer vision applications, and full-stack products for clients in Colombia, Venezuela, and the United States.",
   keywords: [
     "Python developer",
     "AI engineer",
     "Machine learning",
-    "Deep learning",
+    "Generative AI",
     "Computer vision",
     "Django",
     "Next.js",
     "React Native",
     "Expo",
     "LangChain",
+    "OpenAI",
+    "LM Studio",
     "AWS",
   ],
+  authors: [{ name: "Jesus Delgado", url: "https://devjesusdelgado.com" }],
+  creator: "Jesus Delgado",
+  publisher: "Jesus Delgado",
+  category: "technology",
+  applicationName: "Portfolio de Jesus Delgado",
+  referrer: "origin-when-cross-origin",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     title: "Ing. Jesus Delgado | Python Developer, AI Engineer, Web Builder",
     description:
       "Portfolio of Ing. Jesus Delgado — Python developer and AI engineer building production-grade backend systems, computer vision applications, and full-stack products for clients in Colombia, Venezuela, and the United States.",
     siteName: "Ing. Jesus Delgado",
     type: "website",
+    locale: "es_CO",
+    alternateLocale: ["en_US"],
     images: [
       {
         url: "/og-image.jpg",
