@@ -226,8 +226,35 @@ const colombiaFeaturedProjects = [
     playStoreUrl: "",
   },
   {
+    slug: "watti-energy",
+    name: "Watti Energy",
+    description: {
+      es: "Fintech solar colombiana para hogares, empresas e industrias. Desarrollé su experiencia web completa para presentar SolarFlex, el modelo de energía solar sin inversión inicial, y convertir el interés comercial en solicitudes estructuradas.",
+      en: "Colombian solar fintech for homes, businesses, and industrial clients. I built its complete web experience to present SolarFlex, its no-upfront-investment solar model, and turn commercial interest into structured applications.",
+    },
+    features: {
+      es: [
+        "Arquitectura web y narrativa comercial de Watti Energy",
+        "Presentación de soluciones solares residenciales, comerciales e industriales",
+        "Flujo de solicitud de SolarFlex en tres pasos",
+        "Secciones de beneficios, aliados y casos de éxito",
+        "SEO, rendimiento y experiencia adaptable a móviles",
+      ],
+      en: [
+        "Web architecture and commercial narrative for Watti Energy",
+        "Residential, commercial, and industrial solar solution presentation",
+        "Three-step SolarFlex application journey",
+        "Benefits, strategic partners, and success-story sections",
+        "SEO, performance, and responsive mobile experience",
+      ],
+    },
+    url: "https://watti.com.co/",
+    appStoreUrl: "",
+    playStoreUrl: "",
+  },
+  {
     slug: "refinorte",
-    name: "REFINORTE",
+    name: "Refinorte",
     description: {
       es: "Complejo industrial integrado de refinacion de aceites comestibles, margarinas, shortenings, productos nutraceuticos intermedios y jaboneria, proyectado como la primera refinadora de aceite de palma con tecnologia avanzada en Latinoamerica.",
       en: "Integrated industrial complex for refining edible oils, margarines, shortenings, intermediate nutraceutical products, and soap, projected as the first advanced-technology palm oil refinery in Latin America.",
@@ -308,7 +335,7 @@ const colombiaFeaturedProjects = [
   },
   {
     slug: "cooagrovida",
-    name: "COOAGROVIDA",
+    name: "Cooagrovida",
     description: {
       es: "Cooperativa de familias campesinas del Catatumbo, Norte de Santander, dedicada a fortalecer el ciclo productivo agroindustrial y la comercializacion sostenible agricola, con vision de liderazgo nacional al 2030.",
       en: "Cooperative of farming families from el Catatumbo, Norte de Santander, dedicated to strengthening the agroindustrial productive cycle and sustainable agricultural trade, with a national leadership vision by 2030.",
@@ -402,8 +429,8 @@ export const regionalProjects = [
       en: "In Colombia I built distinct digital products: a streaming platform, two marketplaces, a restaurant-ordering app, a university campus, corporate and institutional portals, and the digital transformation of a notary office. Each solution supports a specific operation and is presented through its real functionality.",
     },
     overview: {
-      es: "El portafolio combina productos transaccionales y experiencias de contenido. YuanCity permite explorar productos importados, comprar, pagar y gestionar entregas; GreenCloset funciona como marketplace social de moda circular con publicaciones, chat, geolocalización y pagos. Mikiguiki organiza películas, series, estrenos y fichas editoriales dentro de una experiencia de streaming para web, iOS y Android. TableChat lleva el menú y el pedido a la mesa con asistencia de IA. Allentown University concentra campus virtual, perfiles académicos, calificaciones, biblioteca y videoconferencias. Los demás proyectos presentan operaciones reales de sectores notarial, agroindustrial, gastronómico, social y cooperativo mediante sitios especializados, no tiendas en línea.",
-      en: "The portfolio combines transactional products with content-led experiences. YuanCity supports imported-product discovery, purchasing, payment, and delivery; GreenCloset is a circular-fashion social marketplace with listings, chat, geolocation, and payments. Mikiguiki organizes movies, series, releases, and editorial detail pages in a streaming experience for web, iOS, and Android. TableChat brings AI-assisted menu browsing and ordering to the restaurant table. Allentown University centralizes its virtual campus, academic profiles, grades, library, and videoconferencing. The remaining work presents real notarial, agroindustrial, hospitality, social-impact, and cooperative operations through specialized websites rather than online stores.",
+      es: "El portafolio combina productos transaccionales y experiencias de contenido. YuanCity permite explorar productos importados, comprar, pagar y gestionar entregas; GreenCloset funciona como marketplace social de moda circular con publicaciones, chat, geolocalización y pagos. Mikiguiki organiza películas, series, estrenos y fichas editoriales dentro de una experiencia de streaming para web, iOS y Android. TableChat lleva el menú y el pedido a la mesa con asistencia de IA. Allentown University concentra campus virtual, perfiles académicos, calificaciones, biblioteca y videoconferencias. Watti Energy presenta y estructura la contratación de soluciones solares para hogares, empresas e industrias mediante SolarFlex. Los demás proyectos representan operaciones reales de sectores notarial, agroindustrial, gastronómico, social y cooperativo mediante sitios especializados, no tiendas en línea.",
+      en: "The portfolio combines transactional products with content-led experiences. YuanCity supports imported-product discovery, purchasing, payment, and delivery; GreenCloset is a circular-fashion social marketplace with listings, chat, geolocation, and payments. Mikiguiki organizes movies, series, releases, and editorial detail pages in a streaming experience for web, iOS, and Android. TableChat brings AI-assisted menu browsing and ordering to the restaurant table. Allentown University centralizes its virtual campus, academic profiles, grades, library, and videoconferencing. Watti Energy presents and structures solar adoption for homes, businesses, and industrial clients through SolarFlex. The remaining work represents real notarial, agroindustrial, hospitality, social-impact, and cooperative operations through specialized websites rather than online stores.",
     },
     approach: {
       es: "La arquitectura se decidió según el producto. Las plataformas móviles y transaccionales combinaron React Native, Next.js, Django REST y PostgreSQL para separar catálogo, usuarios, contenido, pedidos y administración. Los portales corporativos priorizaron velocidad, claridad editorial, SEO y gestión de contenidos. En la Notaría Primera de Barranquilla, además de estructurar servicios, requisitos, transparencia y canales oficiales en la web, se automatizó la atención por WhatsApp con un asistente virtual orquestado en n8n y conectado mediante Evolution API.",
@@ -419,6 +446,7 @@ export const regionalProjects = [
         "Streaming de cine original con catálogo editorial, rankings, estrenos y aplicaciones móviles en Mikiguiki.",
         "Pedidos de restaurante desde la mesa con menú digital y asistencia de IA en TableChat.",
         "Campus universitario con gestión académica, biblioteca y videoconferencias en Allentown University.",
+        "Experiencia web fintech y flujo comercial de energía solar sin inversión inicial para Watti Energy.",
         "Atención notarial automatizada con n8n, Evolution API y 58.000 visitas verificadas en tres meses.",
       ],
       en: [
@@ -426,12 +454,13 @@ export const regionalProjects = [
         "Original-film streaming with editorial catalog, rankings, releases, and mobile apps in Mikiguiki.",
         "Table-side restaurant ordering with a digital menu and AI assistance in TableChat.",
         "University campus with academic management, library, and videoconferencing in Allentown University.",
+        "Solar-fintech web experience and no-upfront-investment commercial journey for Watti Energy.",
         "Notarial service automation with n8n, Evolution API, and 58,000 verified visits in three months.",
       ],
     },
     stackDetail: {
-      es: "No todos los proyectos usan la misma arquitectura. Mikiguiki, YuanCity, GreenCloset y TableChat requieren capas diferenciadas para web, aplicaciones móviles, autenticación, catálogos o contenido, estados de operación y publicación en tiendas. Next.js cubre las superficies web indexables; React Native entrega las experiencias móviles; Django REST y PostgreSQL sostienen la lógica de usuarios, contenido, pedidos y administración cuando el producto lo requiere. En Mikiguiki, la estructura editorial organiza películas, series, rankings y próximos estrenos. YuanCity y GreenCloset implementan modelos de marketplace distintos: comercio de productos importados y compraventa de moda circular entre usuarios. TableChat se concentra en menús digitales y pedidos sin contacto.\n\nLos sitios de Empaquetadora del Norte, REFINORTE, Café Arduvi, Fundación Arduvi y COOAGROVIDA tienen otro objetivo: presentar con precisión servicios, marcas, impacto social, sostenibilidad, proyectos productivos, menús o canales de contacto. En estos casos la prioridad técnica es una arquitectura de información clara, rendimiento, accesibilidad, SEO y contenido administrable. Allentown University añade una capa funcional académica con perfiles de estudiantes y docentes, calificaciones, biblioteca, campus virtual y videoconferencias.\n\nLa Notaría Primera de Barranquilla combina una web institucional orientada a servicio público con automatización operativa. El sitio ordena escrituración, registro civil, autenticaciones, trámites no escriturarios, transparencia, normatividad y PQRSD. La atención por WhatsApp se conecta mediante Evolution API y n8n, que orquesta el asistente virtual y los flujos de orientación. El trabajo también incluye SEO local y Google Business Profile; sus métricas registran 58.000 visitas verificadas durante los últimos tres meses.",
-      en: "These projects do not all share one architecture. Mikiguiki, YuanCity, GreenCloset, and TableChat require separate layers for indexable web experiences, mobile apps, authentication, catalogs or content, operational states, and app-store distribution. Next.js powers the web surfaces; React Native delivers mobile experiences; Django REST and PostgreSQL support users, content, orders, and administration where the product requires them. Mikiguiki structures films, series, rankings, and upcoming releases. YuanCity and GreenCloset implement different marketplace models: imported-product commerce and user-to-user circular fashion. TableChat focuses on digital menus and contactless ordering.\n\nEmpaquetadora del Norte, REFINORTE, Café Arduvi, Fundación Arduvi, and COOAGROVIDA serve a different purpose: accurately presenting services, brands, social impact, sustainability, productive projects, menus, and contact channels. Their technical priorities are clear information architecture, performance, accessibility, SEO, and manageable content. Allentown University adds an academic layer with student and faculty profiles, grades, a library, a virtual campus, and videoconferencing.\n\nNotaría Primera de Barranquilla combines a public-service institutional website with operational automation. The site organizes deeds, civil registry, authentications, non-deed procedures, transparency, regulations, and citizen requests. WhatsApp service is connected through Evolution API and n8n, which orchestrates the virtual assistant and guidance workflows. The work also covers local SEO and Google Business Profile, whose metrics record 58,000 verified visits over the last three months.",
+      es: "No todos los proyectos usan la misma arquitectura. Mikiguiki, YuanCity, GreenCloset y TableChat requieren capas diferenciadas para web, aplicaciones móviles, autenticación, catálogos o contenido, estados de operación y publicación en tiendas. Next.js cubre las superficies web indexables; React Native entrega las experiencias móviles; Django REST y PostgreSQL sostienen la lógica de usuarios, contenido, pedidos y administración cuando el producto lo requiere. En Mikiguiki, la estructura editorial organiza películas, series, rankings y próximos estrenos. YuanCity y GreenCloset implementan modelos de marketplace distintos: comercio de productos importados y compraventa de moda circular entre usuarios. TableChat se concentra en menús digitales y pedidos sin contacto.\n\nLos sitios de Empaquetadora del Norte, Watti Energy, Refinorte, Café Arduvi, Fundación Arduvi y Cooagrovida tienen objetivos especializados. En Watti desarrollé la arquitectura web, la comunicación de SolarFlex, el flujo de solicitud y la presentación de soluciones residenciales, comerciales e industriales. En todos estos portales la prioridad técnica es una estructura de información clara, rendimiento, accesibilidad, SEO y contenido administrable. Allentown University añade una capa funcional académica con perfiles de estudiantes y docentes, calificaciones, biblioteca, campus virtual y videoconferencias.\n\nLa Notaría Primera de Barranquilla combina una web institucional orientada a servicio público con automatización operativa. El sitio ordena escrituración, registro civil, autenticaciones, trámites no escriturarios, transparencia, normatividad y PQRSD. La atención por WhatsApp se conecta mediante Evolution API y n8n, que orquesta el asistente virtual y los flujos de orientación. El trabajo también incluye SEO local y Google Business Profile; sus métricas registran 58.000 visitas verificadas durante los últimos tres meses.",
+      en: "These projects do not all share one architecture. Mikiguiki, YuanCity, GreenCloset, and TableChat require separate layers for indexable web experiences, mobile apps, authentication, catalogs or content, operational states, and app-store distribution. Next.js powers the web surfaces; React Native delivers mobile experiences; Django REST and PostgreSQL support users, content, orders, and administration where the product requires them. Mikiguiki structures films, series, rankings, and upcoming releases. YuanCity and GreenCloset implement different marketplace models: imported-product commerce and user-to-user circular fashion. TableChat focuses on digital menus and contactless ordering.\n\nEmpaquetadora del Norte, Watti Energy, Refinorte, Café Arduvi, Fundación Arduvi, and Cooagrovida have specialized goals. For Watti, I built the web architecture, SolarFlex communication, application journey, and presentation of residential, commercial, and industrial solutions. Across these portals, the technical priorities are clear information architecture, performance, accessibility, SEO, and manageable content. Allentown University adds an academic layer with student and faculty profiles, grades, a library, a virtual campus, and videoconferencing.\n\nNotaría Primera de Barranquilla combines a public-service institutional website with operational automation. The site organizes deeds, civil registry, authentications, non-deed procedures, transparency, regulations, and citizen requests. WhatsApp service is connected through Evolution API and n8n, which orchestrates the virtual assistant and guidance workflows. The work also covers local SEO and Google Business Profile, whose metrics record 58,000 verified visits over the last three months.",
     },
     featuredProjects: colombiaFeaturedProjects,
   },
