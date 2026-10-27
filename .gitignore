@@ -222,8 +222,11 @@ cython_debug/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-yarn.lock
 .pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
 
 # local env files
 .env*.local
@@ -249,3 +252,5 @@ bower_components
 psd
 thumb
 sketch
+
+!README.md
